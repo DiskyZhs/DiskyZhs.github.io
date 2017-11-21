@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Disky Blog</title>
+  <title>android MusicPlayer 音乐播放器 Lrc歌词控件的实现 | Disky Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Disky Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="MusicPlayer Lrc歌词控件的实现 最近在做一个音乐播放器，关于其中歌词控件，上网查过了一些资料，然后进行修改，也算完整的实现了其功能。先看看实现后的效果。        实现的原理实际上是自定义一个View来显示歌词，然后利用View.invalidate()方法来不断的调用onDraw方法，重绘该View">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android MusicPlayer 音乐播放器 Lrc歌词控件的实现">
+<meta property="og:url" content="http://yoursite.com/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/index.html">
 <meta property="og:site_name" content="Disky Blog">
+<meta property="og:description" content="MusicPlayer Lrc歌词控件的实现 最近在做一个音乐播放器，关于其中歌词控件，上网查过了一些资料，然后进行修改，也算完整的实现了其功能。先看看实现后的效果。        实现的原理实际上是自定义一个View来显示歌词，然后利用View.invalidate()方法来不断的调用onDraw方法，重绘该View。至于歌词的读取，实际上按照路径读取歌词文件，然后将其时间和每一句歌词分解开并给">
+<meta property="og:updated_time" content="2017-11-21T08:25:20.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Disky Blog">
+<meta name="twitter:title" content="android MusicPlayer 音乐播放器 Lrc歌词控件的实现">
+<meta name="twitter:description" content="MusicPlayer Lrc歌词控件的实现 最近在做一个音乐播放器，关于其中歌词控件，上网查过了一些资料，然后进行修改，也算完整的实现了其功能。先看看实现后的效果。        实现的原理实际上是自定义一个View来显示歌词，然后利用View.invalidate()方法来不断的调用onDraw方法，重绘该View。至于歌词的读取，实际上按照路径读取歌词文件，然后将其时间和每一句歌词分解开并给">
   
     <link rel="alternative" href="/atom.xml" title="Disky Blog" type="application/atom+xml">
   
@@ -153,324 +157,555 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-android MusicPlayer 音乐播放器 Lrc歌词控件的实现" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/Android视频滤镜添加硬解码方案/" class="archive-article-date">
-  	<time datetime="2017-11-21T07:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/Android视频滤镜添加硬解码方案/">Android 滤镜添加硬解码</a>
+    <h1 class="article-title" itemprop="name">
+      android MusicPlayer 音乐播放器 Lrc歌词控件的实现
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android 音视频 滤镜 硬解码</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/" class="archive-article-date">
-  	<time datetime="2017-05-10T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/">轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">camera2 api android CameraView 拍照</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/" class="archive-article-date">
-  	<time datetime="2017-05-08T10:02:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/">BitmapEditor 高效优雅的的Android图片压缩框架</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">android bitmap 图片处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/" class="archive-article-date">
-  	<time datetime="2017-03-30T02:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/">Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据库 openfire搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/22/利用Retrofit进行各种网络请求/" class="archive-article-date">
-  	<time datetime="2016-12-22T09:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/22/利用Retrofit进行各种网络请求/">利用Retrofit进行各种网络请求</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">android retrofit http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/10/简单的Android中MVP模式的应用/" class="archive-article-date">
-  	<time datetime="2016-10-10T11:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/10/简单的Android中MVP模式的应用/">简单的Android中MVP模式的应用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">android mvp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/25/smack android集成问题记录/" class="archive-article-date">
-  	<time datetime="2016-08-25T02:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/25/smack android集成问题记录/">smack android集成问题记录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/" class="archive-article-date">
+        
+        <a href="/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/" class="archive-article-date">
   	<time datetime="2014-10-30T08:20:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-10-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/">android MusicPlayer 音乐播放器 Lrc歌词控件的实现</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>MusicPlayer Lrc歌词控件的实现
+</code></pre><p>最近在做一个音乐播放器，关于其中歌词控件，上网查过了一些资料，然后进行修改，也算完整的实现了其功能。先看看实现后的效果。<br>        实现的原理实际上是自定义一个View来显示歌词，然后利用View.invalidate()方法来不断的调用onDraw方法，重绘该View。<br>至于歌词的读取，实际上按照路径读取歌词文件，然后将其时间和每一句歌词分解开并给每一句一个index，通过处理当前播放时间来得到index以此来显示。<br>具体实现分别如下：<br><a id="more"></a></p>
+<p>首先创建一个IrcContent类，相当于结构体。每一个IrcContent的实例实际上就是一句歌词，而真个Irc文件就是个List<irccontent>.<br>package com.example.zhsmusicplayer;<br>/*</irccontent></p>
+<ul>
+<li>歌词实体类</li>
+<li>每一句带时间的歌词就是一个LrcContent实例</li>
+<li></li>
+<li><p>*/<br>public class LrcContent {</p>
+<p> private String lrcStr;  //歌词内容<br> private int lrcTime;    //歌词当前时间<br> public String getLrcStr() {  </p>
+<pre><code>return lrcStr;  
+</code></pre><p> }<br> public void setLrcStr(String lrcStr) {  </p>
+<pre><code>this.lrcStr = lrcStr;  
+</code></pre><p> }<br> public int getLrcTime() {  </p>
+<pre><code>return lrcTime;  
+</code></pre><p> }<br> public void setLrcTime(int lrcTime) {  </p>
+<pre><code>this.lrcTime = lrcTime;  
+</code></pre><p> }<br>}<br>然后创建一个LrcProcess类用来读取歌词并将歌词中的时间Time转化为 MediaPlayer类中所使用的getCurrentPosition的毫秒。</p>
+</li>
+</ul>
+<p>package com.example.zhsmusicplayer;</p>
+<p>import java.io.BufferedReader;<br>import java.io.File;<br>import java.io.FileInputStream;<br>import java.io.FileNotFoundException;<br>import java.io.IOException;<br>import java.io.InputStreamReader;<br>import java.util.ArrayList;<br>import java.util.List;</p>
+<p>import android.util.Log;</p>
+<p>/*</p>
+<ul>
+<li>用来读取歌词并且解析类</li>
+<li></li>
+<li><em>/<br>public class LrcProcess {<br>private List<lrccontent> lrcList;//List集合用来储存歌词对象（每一句歌词）<br>private LrcContent mLrcContent;<br>/</lrccontent></em> 无参数构造函数*/<br>public LrcProcess() {<br>  mLrcContent = new LrcContent();<br>  lrcList = new ArrayList<lrccontent>();<br>}  </lrccontent></li>
+</ul>
+<p>/<em> 读取某个地址下的歌词文件</em>/<br>   public String readLRC(String path){<br>       StringBuilder stringBuilder = new StringBuilder();<br>       //这里是直接将MP3的地址直接赋予lrc，及要求lrc的地址与MP3地址一致且名称与MP3一致<br>       File f = new File(path.replace(“.mp3”, “.lrc”));<br>       //创建一个文件输入流<br>       try {<br>           //创建一个文件输入流对象<br>           FileInputStream fis = new FileInputStream(f);<br>           InputStreamReader isr = new InputStreamReader(fis, “utf-8”);<br>           BufferedReader br = new BufferedReader(isr);<br>           String s = “”;<br>           while((s = br.readLine()) != null) {<br>               //替换字符<br>               s = s.replace(“[“, “”);<br>               s = s.replace(“]”, “@”);  </p>
+<pre><code>        //分离“@”字符  
+        String splitLrcData[] = s.split(&quot;@&quot;);  
+        if(splitLrcData.length &gt; 1) {  
+            mLrcContent.setLrcStr(splitLrcData[1]);  
 
-        <div class="article-info info-on-right">
-          
-          
+            //处理歌词取得歌曲的时间  
+            int lrcTime = time2Str(splitLrcData[0]);  
+            mLrcContent.setLrcTime(lrcTime);  
 
+            //添加进列表数组  
+            lrcList.add(mLrcContent);  
+
+            //新创建歌词内容对象  
+            mLrcContent = new LrcContent();  
+        }  
+    }  
+} catch (FileNotFoundException e) {  
+    e.printStackTrace();
+    stringBuilder.append(&quot;木有歌词文件，赶紧去下载！...&quot;);  
+} catch (IOException e) {  
+    e.printStackTrace();  
+    stringBuilder.append(&quot;木有读取到歌词哦！&quot;);  
+}  
+return stringBuilder.toString();  
+</code></pre><p>   }<br>   /** </p>
+<pre><code>* 解析歌词时间 
+* 就是将读取到的Time转换为duration
+*/  
+</code></pre><p>   public int time2Str(String timeStr) {<br>       timeStr = timeStr.replace(“:”, “.”);<br>       timeStr = timeStr.replace(“.”, “@”);  </p>
+<pre><code>String timeData[] = timeStr.split(&quot;@&quot;); //将时间分隔成字符串数组  
+
+//分离出分、秒并转换为整型  
+int minute = Integer.parseInt(timeData[0]);  
+int second = Integer.parseInt(timeData[1]);  
+int millisecond = Integer.parseInt(timeData[2]);  
+//计算上一行与下一行的时间转换为毫秒数  
+int currentTime = (minute * 60 + second) * 1000 + millisecond * 10;  
+return currentTime;  
+</code></pre><p>   }<br>   public List<lrccontent> getLrcList() {<br>       return lrcList;<br>   }  </lrccontent></p>
+<p>   }<br><span style="font-family:Arial, Helvetica, sans-serif;"><span style="white-space: normal;"></span></span>      关于File f = new File(path.replace(“.mp3”, “.lrc”)); 这一句是用来读取某地址下的歌词文件，我这里path参数实际上MP3文件的地址，这就意味着，我打开歌词文件的地址必须和MP3地址相同，在同一个文件夹且文件名也相同。<br>      接下来就是自定义View作为IrcView了，这里继承了TextView，复写了onDraw（）函数来显示需要的信息。</p>
+<p><pre name="code" class="java">package com.example.zhsmusicplayer;<br>import java.util.ArrayList;<br>import java.util.List;</pre></p>
+<p>import android.content.Context;<br>import android.graphics.Canvas;<br>import android.graphics.Color;<br>import android.graphics.Paint;<br>import android.graphics.Typeface;<br>import android.util.AttributeSet;<br>import android.util.Log;<br>import android.view.LayoutInflater;<br>import android.widget.ImageView;<br>import android.widget.ProgressBar;<br>import android.widget.RelativeLayout;<br>import android.widget.TextView;</p>
+<pre><code>class CustomBar extends RelativeLayout
+{
+
+    private TextView musicName;
+    private ImageView musicImg;
+    private TextView musicArtist;
+    private TextView musicTime;
+    private ImageView iconPlay;
+    private ImageView iconNext;
+    private ImageView iconPrev;
+    private ProgressBar timeBar;
+
+    public CustomBar(Context context)
+    {
+        super(context);
+    }
+
+
+    public CustomBar(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        // TODO Auto-generated constructor stub
+        LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.custom_music_play, this);
+        if(isInEditMode()){return;}
+
+        musicName=(TextView)findViewById(R.id.name_text);
+        musicArtist=(TextView)findViewById(R.id.author_text);
+        musicTime=(TextView)findViewById(R.id.time_text);
+        musicImg=(ImageView)findViewById(R.id.music_img);
+        iconPlay=(ImageView)findViewById(R.id.play_img);
+        iconNext=(ImageView)findViewById(R.id.next_img);
+        iconPrev=(ImageView)findViewById(R.id.prev_img);
+        timeBar=(ProgressBar)findViewById(R.id.time_progressBar);
+
+    }
+
+    public void setMusicName(String name){
+        musicName.setText(name);
+    }
+    public void setMusicArtist(String Author){
+        musicArtist.setText(Author);
+    }
+    public void setMusicTime(String time){
+        musicTime.setText(time);
+    }
+    public void setOnMusicPlayListener(OnClickListener playListener){
+        iconPlay.setOnClickListener(playListener);
+    }
+    public void setOnMusicPlayNextListener(OnClickListener playNextListener){
+        iconNext.setOnClickListener(playNextListener);
+    }
+    public void setOnMusicPlayPrevListener(OnClickListener playPrevListener){
+        iconPrev.setOnClickListener(playPrevListener);
+    }
+    public void setPlayImg(boolean isPause){
+        if(isPause)
+            iconPlay.setImageResource(R.drawable.icon_pause);
+        else
+            iconPlay.setImageResource(R.drawable.icon_play);
+
+    }
+    public void setTimeBarMax(int max){
+        timeBar.setMax(max);
+    }
+    public void setTimeBarProgress(int progress){
+        timeBar.setProgress(progress);
+
+    }
+}
+
+class LrcView extends TextView{
+     private float width;        //歌词视图宽度  
+        private float height;       //歌词视图高度  
+        private Paint currentPaint; //当前画笔对象  
+        private Paint notCurrentPaint;  //非当前画笔对象  
+        private float textHeight = 25;  //文本高度  
+        private float textSize = 18;        //文本大小  
+        private int index = 0;      //list集合下标  
+
+
+        private List&lt;LrcContent&gt; mLrcList = new ArrayList&lt;LrcContent&gt;();  
+
+        public void setmLrcList(List&lt;LrcContent&gt; mLrcList) {  
+            this.mLrcList = mLrcList;  
+        }  
+
+        public LrcView(Context context) {  
+            super(context);  
+            init();  
+        }  
+        public LrcView(Context context, AttributeSet attrs, int defStyle) {  
+            super(context, attrs, defStyle);  
+            init();  
+        }  
+
+        public LrcView(Context context, AttributeSet attrs) {  
+            super(context, attrs);  
+            init();  
+        }  
+
+        private void init() {  
+            setFocusable(true);     //设置可对焦  
+
+            //高亮部分  
+            currentPaint = new Paint();  
+            currentPaint.setAntiAlias(true);    //设置抗锯齿，让文字美观饱满  
+            currentPaint.setTextAlign(Paint.Align.CENTER);//设置文本对齐方式  
+
+            //非高亮部分  
+            notCurrentPaint = new Paint();  
+            notCurrentPaint.setAntiAlias(true);  
+            notCurrentPaint.setTextAlign(Paint.Align.CENTER);  
+        }  
+
+        /** 
+         * 绘画歌词 
+         */  
+        @Override  
+        protected void onDraw(Canvas canvas) {  
+            super.onDraw(canvas);  
+            if(canvas == null) {  
+                return;  
+            }  
+            //Log.e(&quot;zhs&quot;,&quot;Index in LrcView Ondraw=====&quot;+index);
+            /*if(index!=0)
+            Log.e(&quot;zhs&quot;,mLrcList.get(index).getLrcStr()); */
+
+            //设置字体的大小以及绘制出来的画笔
+            currentPaint.setColor(Color.argb(210, 251, 248, 29));  
+            notCurrentPaint.setColor(Color.argb(140, 255, 255, 255));  
+
+            currentPaint.setTextSize(24);  
+            currentPaint.setTypeface(Typeface.SERIF);  
+
+            notCurrentPaint.setTextSize(textSize);  
+            notCurrentPaint.setTypeface(Typeface.DEFAULT);  
+
+            try {  
+                setText(&quot;&quot;);  
+                canvas.drawText(mLrcList.get(index).getLrcStr(), width / 2, height / 2, currentPaint);  
+
+                float tempY = height / 2;  
+                //画出本句之前的句子  
+                for(int i = index - 1; i &gt;= 0; i--) {  
+                    //向上推移  
+                    tempY = tempY - textHeight;  
+                    canvas.drawText(mLrcList.get(i).getLrcStr(), width / 2, tempY, notCurrentPaint);  
+                }  
+                tempY = height / 2;  
+                //画出本句之后的句子  
+                for(int i = index + 1; i &lt; mLrcList.size(); i++) {  
+                    //往下推移  
+                    tempY = tempY + textHeight;  
+                    canvas.drawText(mLrcList.get(i).getLrcStr(), width / 2, tempY, notCurrentPaint);  
+                }   
+            } catch (Exception e) {  
+                setText(&quot;异常了&quot;);  
+            }  
+        }  
+
+        /** 
+         * 当view大小改变的时候调用的方法 
+         */  
+        @Override  
+        protected void onSizeChanged(int w, int h, int oldw, int oldh) {  
+            super.onSizeChanged(w, h, oldw, oldh);  
+            this.width = w;  
+            this.height = h;  
+        }  
+
+        public void setIndex(int index) {  
+            this.index = index;  
+        }  
+
+
+}
+
+
+                   绘制的原理就是当前index指示的即为当前播放的歌词为一种Paint，而利用另外一种Paint来绘制出其余的歌词。利用setmLrcList(List&lt;LrcContent&gt; mLrcList)函数与setIndex(int index)函数来设置歌词文件以及当前index。
+</code></pre><p>然后就是创建一个用来承载LrcView的MusicPlayActivity.xml文件如下：</p>
+<relativelayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" tools:context="com.example.zhsmusicplayer.MusicPlayActivity" android:background="#ffffff" tools:ignore="MergeRootFrame">
+
+<com.example.zhsmusicplayer.lrcview android:id="@+id/lrcShowView" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#486432" android:layout_centerhorizontal="true">
+
+<p></p></com.example.zhsmusicplayer.lrcview></relativelayout><br>接下来要做的就是在播放音乐的service中处理以获取到Index与当前播放音乐的地址并将其传给activity.<br>获取index，如下：<br>    /**<p></p>
+<pre><code> * 根据时间获取歌词显示的索引值
+ * @return
+ */
+public int lrcIndex() {
+    if(mediaPlayer.isPlaying()) {
+        currentTime = mediaPlayer.getCurrentPosition();
+        duration = mediaPlayer.getDuration();
+    }
+    if(currentTime &lt; duration) {
+        for (int i = 0; i &lt; lrcList.size(); i++) {
+            if (i &lt; lrcList.size() - 1) {
+                if (currentTime &lt; lrcList.get(i).getLrcTime() &amp;&amp; i == 0) {
+                    index = i;
+                }
+                if (currentTime &gt; lrcList.get(i).getLrcTime()
+                        &amp;&amp; currentTime &lt; lrcList.get(i + 1).getLrcTime()) {
+                    index = i;
+                }
+            }
+            if (i == lrcList.size() - 1
+                    &amp;&amp; currentTime &gt; lrcList.get(i).getLrcTime()) {
+                index = i;
+            }
+        }
+    }
+    return index;
+}
+                      初始化歌词，开启线程不断的向Activity中传递数据。
+</code></pre><p>   /**</p>
+<pre><code> * 初始化歌词配置
+ */
+public void initLrc(){
+    handler.post(mRunnable);
+}
+</code></pre><p>Runnable mRunnable = new Runnable() {</p>
+<pre><code>    @Override
+    public void run() {
+        intentForLrc = new Intent(&quot;message_for_lrc&quot;);
+        intentForLrc.putExtra(&quot;path&quot;,path);
+        intentForLrc.putExtra(&quot;LrcIndext&quot;,lrcIndex());
+        sendBroadcast(intentForLrc);
+        handler.postDelayed(mRunnable, 100);
+    }
+};
+</code></pre><p>runnable线程会不断地向Activity发送包括地址与Index信息的广播。<br>在播放音乐的同时调用initLrc()函数来不断获取并发送歌词的信息。<br> /** </p>
+<pre><code> * 播放音乐 
+ * @param position 
+ */  
+private void play(int position) {  
+    try {  
+        initLrc();
+        mediaPlayer.reset();//把各项参数恢复到初始状态  
+        mediaPlayer.setDataSource(path);  
+        mediaPlayer.prepare();  //进行缓冲  
+     //   mediaPlayer.setOnPreparedListener(new PreparedListener(position));//注册一个监听器  
+        mediaPlayer.start();
+        isPlaying = true;
+    }  
+    catch (Exception e) {  
+        e.printStackTrace();  
+    }  
+} 
+</code></pre><p>最后就是Activity中进行广播的接收以及控件的重绘了。<br>package com.example.zhsmusicplayer;</p>
+<p>import java.util.List;</p>
+<p>import com.example.zhsmusicplayer.MusicListActivity.widgetReceiver;</p>
+<p>import android.app.Activity;<br>import android.content.BroadcastReceiver;<br>import android.content.Context;<br>import android.content.Intent;<br>import android.content.IntentFilter;<br>import android.os.Bundle;<br>import android.os.Handler;<br>import android.util.Log;<br>import android.view.animation.AnimationUtils;</p>
+<p>public class MusicPlayActivity extends Activity {<br>    LrcView lrcView;<br>    ServiceReceiver LrcReceiver;<br>    IntentFilter intentFilter;//接收来自Service的广播,用来跟新歌词信息<br>    Handler handler;//handler用来执行实现LrcIndex的检测的接收<br>    Runnable mRunnable;<br>    int currentTime,duration;<br>    String path =null;//当前歌词的path<br>    int Index=-1;//歌词每一句的索引<br>    LrcProcess mLrcProcess;<br>    List<lrccontent> lrcList;<br>    boolean IsRunnable=false;<br>    @Override<br>    protected void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.activity_music_play);<br>        lrcView = (LrcView) findViewById(R.id.lrcShowView);</lrccontent></p>
+<pre><code>    //广播的注册
+    LrcReceiver=new ServiceReceiver();
+    intentFilter = new IntentFilter();
+    intentFilter.addAction(&quot;message_for_lrc&quot;);
+    registerReceiver(LrcReceiver, intentFilter);
+
+    //handler
+    handler=new Handler(){};
+    //该标志位的目的就是每次进入到该activity执行一次handler.post(mRunnable)
+    IsRunnable=false;
+    //Runnable
+    mRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            lrcView.setIndex(Index);
+            lrcView.invalidate();
+            handler.postDelayed(mRunnable, 100);
+        }
+    };
+}
+
+
+@Override
+protected void onDestroy() {
+    // TODO Auto-generated method stub
+    super.onDestroy();
+    unregisterReceiver(LrcReceiver);
+}
+
+@Override
+protected void onPause() {
+    // TODO Auto-generated method stub
+    super.onPause();
+}
+
+//接收来自widget的broadcast
+public class ServiceReceiver extends BroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        // TODO Auto-generated method stub
+         String action = intent.getAction(); 
+         if(action.equals(&quot;message_for_lrc&quot;)){
+             if(intent.hasExtra(&quot;path&quot;)){                     
+                 path=intent.getStringExtra(&quot;path&quot;);
+                 mLrcProcess = new LrcProcess();
+                    //读取歌词文件
+                    mLrcProcess.readLRC(path);
+                    //传回处理后的歌词文件
+                    lrcList = mLrcProcess.getLrcList();
+                    lrcView.setmLrcList(lrcList);
+                    if(IsRunnable){}
+                    else{
+                        handler.post(mRunnable);
+                        IsRunnable=true;
+                        }
+             }
+
+             if(intent.hasExtra(&quot;LrcIndext&quot;)){
+                 if(intent.getIntExtra(&quot;LrcIndext&quot;,-1)!=Index){
+                 Index=intent.getIntExtra(&quot;LrcIndext&quot;,-1);
+                 }
+
+
+
+             }
+         }
+
+
+    }
+}
+</code></pre><p>}<br>动态注册广播接收器同时创建ruannable线程来不断更新LrcView。实际上由于只需要在第一次获取到path信息的时候启动Runnable，故设立了标志位IsRunnable<br>来进行控制。同时保证了当你每次跳到该Activity时，可以调用Runnable来继续刷新IrcView。<br>IrcView的基本实现就是这样了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/08/25/smack android集成问题记录/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          smack android集成问题记录
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -493,8 +728,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Disky Blog</title>
+  <title>利用Retrofit进行各种网络请求 | Disky Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Disky Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续R">
+<meta name="keywords" content="android retrofit http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Retrofit进行各种网络请求">
+<meta property="og:url" content="http://yoursite.com/2016/12/22/利用Retrofit进行各种网络请求/index.html">
 <meta property="og:site_name" content="Disky Blog">
+<meta property="og:description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续Retrofit2.0">
+<meta property="og:updated_time" content="2017-11-21T08:27:35.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Disky Blog">
+<meta name="twitter:title" content="利用Retrofit进行各种网络请求">
+<meta name="twitter:description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续Retrofit2.0">
   
     <link rel="alternative" href="/atom.xml" title="Disky Blog" type="application/atom+xml">
   
@@ -153,198 +158,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-利用Retrofit进行各种网络请求" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/Android视频滤镜添加硬解码方案/" class="archive-article-date">
-  	<time datetime="2017-11-21T07:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/Android视频滤镜添加硬解码方案/">Android 滤镜添加硬解码</a>
+    <h1 class="article-title" itemprop="name">
+      利用Retrofit进行各种网络请求
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android 音视频 滤镜 硬解码</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/" class="archive-article-date">
-  	<time datetime="2017-05-10T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/">轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">camera2 api android CameraView 拍照</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/" class="archive-article-date">
-  	<time datetime="2017-05-08T10:02:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/">BitmapEditor 高效优雅的的Android图片压缩框架</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">android bitmap 图片处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/" class="archive-article-date">
-  	<time datetime="2017-03-30T02:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/">Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据库 openfire搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/22/利用Retrofit进行各种网络请求/" class="archive-article-date">
+        
+        <a href="/2016/12/22/利用Retrofit进行各种网络请求/" class="archive-article-date">
   	<time datetime="2016-12-22T09:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/22/利用Retrofit进行各种网络请求/">利用Retrofit进行各种网络请求</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="利用Retrofit进行各种网络请求"><a href="#利用Retrofit进行各种网络请求" class="headerlink" title="利用Retrofit进行各种网络请求"></a>利用Retrofit进行各种网络请求</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。<br>本文所用的一切代码都是继续Retrofit2.0</p>
+<a id="more"></a>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://square.github.io/retrofit/" target="_blank" rel="noopener">Retrofit官网</a>介绍了类型的网络请求的封装<br><a href="https://futurestud.io/tutorials/retrofit-getting-started-and-android-client" target="_blank" rel="noopener">Retrofit使用手册</a>这里介绍了各种情况下使用Retrofit</p>
+<h2 id="Retrofit的基本使用"><a href="#Retrofit的基本使用" class="headerlink" title="Retrofit的基本使用"></a>Retrofit的基本使用</h2><h3 id="创建基本HttpClient"><a href="#创建基本HttpClient" class="headerlink" title="创建基本HttpClient"></a>创建基本HttpClient</h3><pre><code>代码如下:
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 请求超时时长</span><br><span class="line"> */</span><br><span class="line">private static final int API_BASE_URL = &quot;http://www.hwits.top/&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 请求超时时长</span><br><span class="line"> */</span><br><span class="line">private static final int DEFAULT_TIMEOUT = 5;</span><br><span class="line">/**</span><br><span class="line"> * OkHttpClient用来添加固定的请求HEAD</span><br><span class="line"> */</span><br><span class="line">private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder().connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 添加BaseUrl以及对Gson和Rxjava的依赖,每次创建</span><br><span class="line"> */</span><br><span class="line">private static Retrofit.Builder builder =</span><br><span class="line">        new Retrofit.Builder()</span><br><span class="line">                .baseUrl(API_BASE_URL)</span><br><span class="line">                .addConverterFactory(GsonConverterFactory.create())</span><br><span class="line">                .addCallAdapterFactory(RxJavaCallAdapterFactory.create());</span><br><span class="line">/**</span><br><span class="line"> * 不包含请求头的普通操作</span><br><span class="line"> *</span><br><span class="line"> * @param serviceClass</span><br><span class="line"> * @param &lt;S&gt;</span><br><span class="line"> * @return</span><br><span class="line"> */</span><br><span class="line">public &lt;S&gt; S createService(Class&lt;S&gt; serviceClass) &#123;</span><br><span class="line">    //创建Retrofit客户端</span><br><span class="line">    OkHttpClient client = httpClient.build();</span><br><span class="line">    Retrofit retrofit = builder.client(client).build();</span><br><span class="line">    return retrofit.create(serviceClass);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 简单的解释一下就是httpClient是一个OkHttpClient.Builder，设置了默认的请求时长。<br> builder是一个Retrofit.Builder，设置了请求的基地址以及使用Gson进行Json解析，使用Rxjava作为请求返回回调。<br>createService函数是用来创建请求接口服务的，用来具体实现请求</p>
+<h3 id="封装接口"><a href="#封装接口" class="headerlink" title="封装接口"></a>封装接口</h3><pre><code>以一个最简单的Get请求为例
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 查询法律条文接口（异步）</span><br><span class="line"> */</span><br><span class="line">public interface TrafficLawService &#123;</span><br><span class="line">    @GET(&quot;dictitem/getItemListByKind.json?kind=TrafficLaw&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;ArrayList&lt;Dictionaries&gt;&gt;&gt; getTrafficLaw();</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * 查询法律条文接口（Sync）</span><br><span class="line"> */</span><br><span class="line">public interface TrafficLawService &#123;</span><br><span class="line">    @GET(&quot;dictitem/getItemListByKind.json?kind=TrafficLaw&quot;)</span><br><span class="line">    HttpReply&lt;ArrayList&lt;Dictionaries&gt;&gt; getTrafficLaw();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简单解释一下就是，异步请求回返回给你一个回调这里使用Rxjava作为回调结果所以返回的是Observable，不设置回调的话返回为Call，Observable后面跟上的泛型就是你请求的返回结果通过序列化生成的实体，当然你也可以直接使用Retrofit提供的ResponseBody作为返回结果。<br>下面就是个阻塞的同步网络请求了，直接返回需要的结果</p>
+<h3 id="请求示例"><a href="#请求示例" class="headerlink" title="请求示例"></a>请求示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Observable&lt;HttpReply&lt;ArrayList&lt;Dictionaries&gt;&gt;&gt; call =</span><br><span class="line">       client.createService(TrafficLawService).getTrafficLaw();</span><br><span class="line">       </span><br><span class="line">HttpReply&lt;ArrayList&lt;Dictionaries&gt;&gt; call =</span><br><span class="line">       client.createService(TrafficLawService).getTrafficLaw();</span><br></pre></td></tr></table></figure>
+<p>上面是异步调用返回的结果，后面是要经过Rxjava中的Subscriber进行订阅处理，这里不做详细解释<br>下面是直接返回结果，可以用来直接使用。</p>
+<h2 id="不同的网络请求"><a href="#不同的网络请求" class="headerlink" title="不同的网络请求"></a>不同的网络请求</h2><p>这里不同情况的封装列举例子进行讲解</p>
+<h3 id="请求地址中包含变量"><a href="#请求地址中包含变量" class="headerlink" title="请求地址中包含变量"></a>请求地址中包含变量</h3><pre><code>比如请求BaseUrl+ &quot;m/uservehicle/preferenced/1815141515&quot;
+这里最后的一个地址参数是可变的，封装入下
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface SetUserVehiclePerferencedService &#123;</span><br><span class="line">    @GET(&quot;m/uservehicle/preferenced/&#123;vehicleId&#125;&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;Boolean&gt;&gt; setVehiclePerferenced(@Path(&quot;vehicleId&quot;)    String vehicleId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将变量利用{}封装，使用@path注解参数</p>
+<h3 id="请求地址中包含查询变量"><a href="#请求地址中包含查询变量" class="headerlink" title="请求地址中包含查询变量"></a>请求地址中包含查询变量</h3><p>还有一种比较常见的请求地址BaseUrl + “common/content/getarticlebyid？articleID =xxxxx”<br>articleId其实是查询参数，封装如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface GetNewsInfoByIdService &#123;</span><br><span class="line">    @GET(&quot;common/content/getarticlebyid&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;NewsInfoData&gt;&gt; getNewsInfo(@Query(&quot;articleID&quot;) String articleId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@GET(&quot;group/&#123;id&#125;/users&quot;)</span><br><span class="line">Observable&lt;List&lt;User&gt;&gt; groupList(@Path(&quot;id&quot;) int groupId, @QueryMap Map&lt;String, String&gt; options);</span><br></pre></td></tr></table></figure>
+<p>很简单，使用@Query作为注解，@QueryMap传入多个参数</p>
+<h3 id="上传Json-上传实体"><a href="#上传Json-上传实体" class="headerlink" title="上传Json/上传实体"></a>上传Json/上传实体</h3><p>如果请求中需要我们上传实体反序列化的Json字符串，上传对象的,<br>封装如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface UpdateUserInfoService &#123;</span><br><span class="line">    @POST(&quot;m/appuser/updat&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;Boolean&gt;&gt; updateUserInfo(@Body UserInfo userInfo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样很简单，使用@Body注解参数即可。</p>
+<h3 id="Form提交，提交参数"><a href="#Form提交，提交参数" class="headerlink" title="Form提交，提交参数"></a>Form提交，提交参数</h3><p>当你需要进行表单提交提交参数的时候<br>封装如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@FormUrlEncoded</span><br><span class="line">@POST(&quot;user/edit&quot;)</span><br><span class="line">Call&lt;User&gt; updateUser(@Field(&quot;first_name&quot;) String first, @Field(&quot;last_name&quot;) String last);</span><br></pre></td></tr></table></figure>
+<p>使用@Field注解添加表单提交参数，@FieldMap添加多个参数<br>Tips：使用@Filed时，需要添加@FormUrlEncoded注解来进行编码</p>
+<h3 id="上传单个文件"><a href="#上传单个文件" class="headerlink" title="上传单个文件"></a>上传单个文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 更换用户图像</span><br><span class="line"> */</span><br><span class="line">public interface UploadUserAvatarService &#123;</span><br><span class="line">    @Multipart</span><br><span class="line">    @POST(&quot;m/appuser/upload/&#123;userId&#125;&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;Boolean&gt;&gt; upload(@Path(&quot;userId&quot;) String id, @Part MultipartBody.Part avatar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里上传文件的话，必须将上传的文件构建成MultipartBody.Part的实体（因为Retrofit2.0实际上默认使用OkHttp作为HttpClient，所以MultipartBody.Part 实际上来自OkHttpClent），然后利用@Part来注解MultipartBody.Part ，下面向大家展示如何生成MultipartBody.Part<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 上传用户头像</span><br><span class="line"> *</span><br><span class="line"> * @param subscriber</span><br><span class="line"> * @param accessToken</span><br><span class="line"> * @param avatar</span><br><span class="line"> * @param userId</span><br><span class="line"> */</span><br><span class="line">public void uploadAvatar(Subscriber&lt;HttpReply&lt;Boolean&gt;&gt; subscriber, String accessToken, File avatar, String userId) &#123;</span><br><span class="line">    MultipartBody.Part avatarP = MultipartBody.Part.createFormData(&quot;file&quot;, &quot;avatar.jpg&quot;, RequestBody.create(MediaType.parse(&quot;image/jpeg&quot;), avatar));</span><br><span class="line">    createFileService(TrafficHttpContrains.UploadUserAvatarService.class, accessToken).upload(userId, avatarP)</span><br><span class="line">            .subscribeOn(Schedulers.io())</span><br><span class="line">            .unsubscribeOn(Schedulers.io())</span><br><span class="line">            .observeOn(AndroidSchedulers.mainThread())</span><br><span class="line">            .subscribe(subscriber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上所示，RequestBody.create创建File的RequestBody（来自okHttp），第一个参数用来设置文件类型，第二个参数为上传文件<br>利用MultipartBody.Part.createFormData函数再次封装RequestBody作为Retrofit请求参数，第一个参数”file“表示提交给后台的参数，相当与前文中@Field（”file“）就行修饰；<br>第二个参数就是你上传文件自定义的文件名了。</p>
+<p>综上，文件，文件名，文件类型，对应参数，这么就直接构成了单个文件上传。</p>
+<h3 id="多表单提交（参数和文件混合）"><a href="#多表单提交（参数和文件混合）" class="headerlink" title="多表单提交（参数和文件混合）"></a>多表单提交（参数和文件混合）</h3><p>使用MutilForm，多表单提交时，当我想要提交多个文件的时候，同时还要上传多个参数的时候，也就是多表单提交既包括关键字，又包括文件的时候，怎么办？<br>这里其实是困扰了我许久的地方，解救方案就是将所有参数封装成RequestBody，接口封装如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 上传证据</span><br><span class="line"> */</span><br><span class="line">public interface UploadProofsService &#123;</span><br><span class="line">    @Multipart</span><br><span class="line">    @POST(&quot;m/accident/upload&quot;)</span><br><span class="line">    Observable&lt;HttpReply&lt;Boolean&gt;&gt; uploadProofs(@Part List&lt;MultipartBody.Part&gt; fileMap, @PartMap HashMap&lt;String, RequestBody&gt; map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以@Part作为注解所有的文件都封装在一个MultipartBody.Part的List中，以@PartMap作为注解所有的其他参数封装到关键字–&gt;RequestBody的实体中。（这里其实都源于okHttp的使用）<br>如何将参数进行封装，实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 证据上传</span><br><span class="line"> */</span><br><span class="line">public void upLoadProofs(Subscriber&lt;HttpReply&lt;Boolean&gt;&gt; subscriber, String accessToken, String accidentId, HashMap&lt;Integer, String&gt; photoMap, List&lt;ProofTemplate&gt; proofTemplateList, File recorderFile, String accidentType, String timestamp, String vehicleCount, String position, String roadName, String regionCode, String regionName, String longitude, String latitude, String weather, String accidentSource) &#123;</span><br><span class="line">    //添加FileMap</span><br><span class="line">    List&lt;MultipartBody.Part&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">    //添加图片证据</span><br><span class="line">    for (Map.Entry&lt;Integer, String&gt; entry : photoMap.entrySet()) &#123;</span><br><span class="line">        MultipartBody.Part proof = MultipartBody.Part.createFormData(&quot;file&quot;, proofTemplateList.get(entry.getKey()).getName() + &quot;.jpg&quot;, RequestBody.create(MediaType.parse(&quot;image/jpeg&quot;), new File(entry.getValue())));</span><br><span class="line">        list.add(proof);</span><br><span class="line">    &#125;</span><br><span class="line">    //添加录音证据</span><br><span class="line">    if (null != recorderFile &amp;&amp; recorderFile.exists()) &#123;</span><br><span class="line">        MultipartBody.Part record = MultipartBody.Part.createFormData(&quot;file&quot;, AccidentProof.ProofTypeEn[AccidentProof.ProofTypeEn.length - 1] + &quot;.amr&quot;, RequestBody.create(MediaType.parse(&quot;application/octet-stream&quot;), recorderFile));</span><br><span class="line">        list.add(record);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //添加其他的参数Body</span><br><span class="line">    RequestBody accidentTypeRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), accidentType);</span><br><span class="line">    RequestBody timeStampRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), timestamp);</span><br><span class="line">    RequestBody vehicleCountRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), vehicleCount);</span><br><span class="line">    RequestBody positionRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), position);</span><br><span class="line">    RequestBody roadNameRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), roadName);</span><br><span class="line">    RequestBody regionCodeRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), regionCode);</span><br><span class="line">    RequestBody regionNameRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), regionName);</span><br><span class="line">    RequestBody longitudeRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), longitude);</span><br><span class="line">    RequestBody latitudeRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), latitude);</span><br><span class="line">    RequestBody weatherRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), weather);</span><br><span class="line">    RequestBody accidentSourceRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), accidentSource);</span><br><span class="line">    RequestBody accidentIdRb = RequestBody.create(MediaType.parse(&quot;text/plain&quot;), accidentId);</span><br><span class="line"></span><br><span class="line">    //添加FileMap</span><br><span class="line">    HashMap&lt;String, RequestBody&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_ACCIDENT_TYPE, accidentTypeRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_TIME_STAMP, timeStampRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_COUNT, vehicleCountRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_POSITION, positionRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_ROAD_NAME, roadNameRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_REGION_CODE, regionCodeRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_REGION_NAME, regionNameRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_LONGITUDE, longitudeRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_LATITUDE, latitudeRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_WEATHER, weatherRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_VEHICLE_ACCIDENT_SOURCE, accidentSourceRb);</span><br><span class="line">    map.put(HttpRequstConstant.UPLOAD_PROOF_PARA_ID, accidentIdRb);</span><br><span class="line"></span><br><span class="line">    //默认给请求头添加了contentType json</span><br><span class="line">    createFileService(TrafficHttpContrains.UploadProofsService.class, accessToken).uploadProofs(list, map)</span><br><span class="line">            .subscribeOn(Schedulers.io())</span><br><span class="line">            .unsubscribeOn(Schedulers.io())</span><br><span class="line">            .observeOn(AndroidSchedulers.mainThread())</span><br><span class="line">            .subscribe(subscriber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上，将图片文件以及录音文件，封装成MultipartBody.Part，封装方式和上传单个文件一样，然后添加到List当中，值得注意的地方是图片的contentType应该为”image/jpeg”，而录音以及其他文件使用流传输，可以将contentType设置为”application/octet-stream”。<br>对于其他参数的设置就是封装成RequestBody，很简单不用多说。</p>
+<p>值得一提的是使用多表单上传文件的时候，需要把请求时候的请求头中”Content-Type”设置为<br>“multipart/form-data”，这个在下一节中会讲到。</p>
+<h2 id="Http请求Header的设置"><a href="#Http请求Header的设置" class="headerlink" title="Http请求Header的设置"></a>Http请求Header的设置</h2><p>这里的大部分例子来源于Retrofit官网。</p>
+<h3 id="固定Header设置"><a href="#固定Header设置" class="headerlink" title="固定Header设置"></a>固定Header设置</h3><p>使用@Headers注解，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@Headers(&quot;Cache-Control: max-age=640000&quot;)</span><br><span class="line">@GET(&quot;widget/list&quot;)</span><br><span class="line">Call&lt;List&lt;Widget&gt;&gt; widgetList();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@Headers(&#123;</span><br><span class="line">    &quot;Accept: application/vnd.github.v3.full+json&quot;,</span><br><span class="line">    &quot;User-Agent: Retrofit-Sample-App&quot;</span><br><span class="line">&#125;)</span><br><span class="line">@GET(&quot;users/&#123;username&#125;&quot;)</span><br><span class="line">Call&lt;User&gt; getUser(@Path(&quot;username&quot;) String username);</span><br></pre></td></tr></table></figure>
+<h3 id="Header中带有变量"><a href="#Header中带有变量" class="headerlink" title="Header中带有变量"></a>Header中带有变量</h3><p>使用@Header注解作为参数，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@GET(&quot;user&quot;)</span><br><span class="line">Call&lt;User&gt; getUser(@Header(&quot;Authorization&quot;) String authorization)</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用OkHttp-interceptor添加Header"><a href="#使用OkHttp-interceptor添加Header" class="headerlink" title="使用OkHttp interceptor添加Header"></a>使用OkHttp interceptor添加Header</h3><p>当你有大量的请求需要添加Header时，这样在每个接口中书写一遍Header是一件很麻烦的事情，最常见的情况就是Oauther授权，AccessToken访问。这里处理方式就是在使用Retrofit执行接口的时候回创建OkHttpClient，给OkHttpClient添加Header配置。<br>实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 获取用户信息等一系列需要用到AccessToken的Http请求的头的设置</span><br><span class="line">public static final String STANDARD_HTTP_HEAD_AUTHORIZATION_KEY = &quot;Authorization&quot;;</span><br><span class="line">public static final String STANDARD_HTTP_HEAD_AUTHORIZATION_VALUE = &quot;Bearer &quot;;</span><br><span class="line">public static final String STANDARD_HTTP_HEAD_CONTENT_TYPE_KEY = &quot;Content-Type&quot;;</span><br><span class="line">public static final String STANDARD_HTTP_HEAD_CONTENT_TYPE_VALUE = &quot;application/json;charset=UTF-8&quot;;</span><br><span class="line">public static final String STANDARD_HTTP_HEAD_ACCESS_TOKEN_KEY = &quot;x-auth-token&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 正常的包括AccessToken请求头的请求,Json</span><br><span class="line"> *</span><br><span class="line"> * @param serviceClass</span><br><span class="line"> * @param accessToken</span><br><span class="line"> * @param &lt;S&gt;</span><br><span class="line"> * @return</span><br><span class="line"> */</span><br><span class="line">public &lt;S&gt; S createService(Class&lt;S&gt; serviceClass, final String accessToken) &#123;</span><br><span class="line">    if (accessToken != null) &#123;</span><br><span class="line">        //添加固定的请求Header</span><br><span class="line">        httpClient.addInterceptor(new Interceptor() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public Response intercept(Interceptor.Chain chain) throws IOException &#123;</span><br><span class="line">                Request original = chain.request();</span><br><span class="line">                // Request customization: add request headers</span><br><span class="line">                Request.Builder requestBuilder = original.newBuilder()</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_AUTHORIZATION_KEY, HttpRequstConstant.STANDARD_HTTP_HEAD_AUTHORIZATION_VALUE + accessToken)</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_CONTENT_TYPE_KEY, HttpRequstConstant.STANDARD_HTTP_HEAD_CONTENT_TYPE_VALUE)</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_ACCESS_TOKEN_KEY, accessToken)</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_DEVICE_TOKEN_KEY, SecurityApplication.device_token)</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_DEVICE_TYPE_KEY, SecurityApplication.device_type)</span><br><span class="line">                        .header(HttpRequstConstant.STANDARD_HTTP_HEAD_VERSION_KEY, SecurityApplication.VERSION)</span><br><span class="line">                        .method(original.method(), original.body());</span><br><span class="line"></span><br><span class="line">                Request request = requestBuilder.build();</span><br><span class="line">                return chain.proceed(request);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    //创建Retrofit客户端</span><br><span class="line">    OkHttpClient client = httpClient.build();</span><br><span class="line">    Retrofit retrofit = builder.client(client).build();</span><br><span class="line">    return retrofit.create(serviceClass);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上，每次调用接口的时候使用CreatService（clz,accessToken）就可以了，<br>例子中包括了AccessToken信息，以及服务器端自定义的需要的device，version等请求头信息。</p>
+<p>最后附上多表单提交File时候，请求头的设置，你需要请求头中”Content-Type”设置为<br>“multipart/form-data”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static final String MULTIPART_FORM_DATA = &quot;multipart/form-data&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  * 正常的包括AccessToken请求头的请求,multipart内容类型</span><br><span class="line">  *</span><br><span class="line">  * @param serviceClass</span><br><span class="line">  * @param accessToken</span><br><span class="line">  * @param &lt;S&gt;</span><br><span class="line">  * @return</span><br><span class="line">  */</span><br><span class="line"> public &lt;S&gt; S createFileService(Class&lt;S&gt; serviceClass, final String accessToken) &#123;</span><br><span class="line">     if (accessToken != null) &#123;</span><br><span class="line">         //添加固定的请求Header</span><br><span class="line">         httpClient.addInterceptor(new Interceptor() &#123;</span><br><span class="line">             @Override</span><br><span class="line">             public Response intercept(Interceptor.Chain chain) throws IOException &#123;</span><br><span class="line">                 Request original = chain.request();</span><br><span class="line">                 // Request customization: add request headers</span><br><span class="line">                 Request.Builder requestBuilder = original.newBuilder()</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_AUTHORIZATION_KEY, HttpRequstConstant.STANDARD_HTTP_HEAD_AUTHORIZATION_VALUE + accessToken)</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_CONTENT_TYPE_KEY, MULTIPART_FORM_DATA)</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_ACCESS_TOKEN_KEY, accessToken)</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_DEVICE_TOKEN_KEY, SecurityApplication.device_token)</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_DEVICE_TYPE_KEY, SecurityApplication.device_type)</span><br><span class="line">                         .header(HttpRequstConstant.STANDARD_HTTP_HEAD_VERSION_KEY, SecurityApplication.VERSION)</span><br><span class="line">                         .method(original.method(), original.body());</span><br><span class="line"></span><br><span class="line">                 Request request = requestBuilder.build();</span><br><span class="line">                 return chain.proceed(request);</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">     &#125;</span><br><span class="line">     //创建Retrofit客户端</span><br><span class="line">     OkHttpClient client = httpClient.build();</span><br><span class="line">     Retrofit retrofit = builder.client(client).build();</span><br><span class="line">     return retrofit.create(serviceClass);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p>下载固定地址下的文件，接口如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 下载文件</span><br><span class="line"> */</span><br><span class="line">public interface DownLoadFileService &#123;</span><br><span class="line">    @GET</span><br><span class="line">    Observable&lt;ResponseBody&gt; downLoad(@Url String fileUrl);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 下载文件（大型文件）</span><br><span class="line"> */</span><br><span class="line">public interface DownLoadFileService &#123;</span><br><span class="line">    @Streaming</span><br><span class="line">    @GET</span><br><span class="line">    Observable&lt;ResponseBody&gt; downLoad(@Url String fileUrl);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大型文件添加@Streaming注解，在返回的回调中从ResponseBody中取出数据，然后储存成文件，储存代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 存储retrofit下载的文件</span><br><span class="line"> *</span><br><span class="line"> * @param body</span><br><span class="line"> * @param filePath</span><br><span class="line"> * @return</span><br><span class="line"> */</span><br><span class="line">public boolean writeResponseBodyToDisk(ResponseBody body, String filePath) &#123;</span><br><span class="line">    LogUtil.e(&quot;securities&quot;, &quot;writeResponseBodyToDisk body&quot; + body.contentLength());</span><br><span class="line">    try &#123;</span><br><span class="line">        File futureStudioIconFile = new File(filePath);</span><br><span class="line">        InputStream inputStream = null;</span><br><span class="line">        OutputStream outputStream = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            byte[] fileReader = new byte[4096];</span><br><span class="line">            long fileSize = body.contentLength();</span><br><span class="line">            long fileSizeDownloaded = 0;</span><br><span class="line"></span><br><span class="line">            inputStream = body.byteStream();</span><br><span class="line">            outputStream = new FileOutputStream(futureStudioIconFile);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            while (true) &#123;</span><br><span class="line">                LogUtil.e(&quot;&quot;, &quot;file read before inputStream available =&quot; + inputStream.available());</span><br><span class="line">                int read = inputStream.read(fileReader);</span><br><span class="line">                LogUtil.e(&quot;&quot;, &quot;file read after &quot;);</span><br><span class="line">                if (read == -1) &#123;</span><br><span class="line">                    LogUtil.e(&quot;&quot;, &quot;file read == -1 &quot;);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                outputStream.write(fileReader, 0, read);</span><br><span class="line">                LogUtil.e(&quot;&quot;, &quot;file write after &quot;);</span><br><span class="line">                fileSizeDownloaded += read;</span><br><span class="line">                LogUtil.e(&quot;&quot;, &quot;file download: &quot; + fileSizeDownloaded + &quot; of &quot; + fileSize);</span><br><span class="line">            &#125;</span><br><span class="line">            outputStream.flush();</span><br><span class="line">            return true;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            LogUtil.e(&quot;securities&quot;, &quot;writeResponseBodyToDisk fail e&quot; + e.toString());</span><br><span class="line">            return false;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            if (inputStream != null) &#123;</span><br><span class="line">                inputStream.close();</span><br><span class="line">            &#125;</span><br><span class="line">            if (outputStream != null) &#123;</span><br><span class="line">                outputStream.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        LogUtil.e(&quot;securities&quot;, &quot;writeResponseBodyToDisk fail e&quot; + e.toString());</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PS：最近貌似有人试过，上传文件不用设置请求头中的content-type为”multipart/form-data”，待验证，后续有时间，会就Rxjava在进行详细的讲解</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -356,121 +273,115 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/10/简单的Android中MVP模式的应用/" class="archive-article-date">
-  	<time datetime="2016-10-10T11:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/10/简单的Android中MVP模式的应用/">简单的Android中MVP模式的应用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">android mvp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/25/smack android集成问题记录/" class="archive-article-date">
-  	<time datetime="2016-08-25T02:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/25/smack android集成问题记录/">smack android集成问题记录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/" class="archive-article-date">
-  	<time datetime="2014-10-30T08:20:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-10-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/10/30/android MusicPlayer 音乐播放器 Lrc歌词控件的实现/">android MusicPlayer 音乐播放器 Lrc歌词控件的实现</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/12/22/利用Retrofit进行各种网络请求/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/10/10/简单的Android中MVP模式的应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单的Android中MVP模式的应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -493,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
