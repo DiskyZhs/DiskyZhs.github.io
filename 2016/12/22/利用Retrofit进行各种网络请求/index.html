@@ -5,22 +5,22 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>利用Retrofit进行各种网络请求 | Disky Blog</title>
+  <link rel="dns-prefetch" href="http://zhanghaosong.com">
+  <title>利用Retrofit进行各种网络请求 | Disky 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续R">
 <meta name="keywords" content="android retrofit http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用Retrofit进行各种网络请求">
-<meta property="og:url" content="http://yoursite.com/2016/12/22/利用Retrofit进行各种网络请求/index.html">
-<meta property="og:site_name" content="Disky Blog">
+<meta property="og:url" content="http://zhanghaosong.com/2016/12/22/利用Retrofit进行各种网络请求/index.html">
+<meta property="og:site_name" content="Disky 的博客">
 <meta property="og:description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续Retrofit2.0">
-<meta property="og:updated_time" content="2017-11-21T08:27:35.985Z">
+<meta property="og:updated_time" content="2017-11-22T06:36:21.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Retrofit进行各种网络请求">
 <meta name="twitter:description" content="利用Retrofit进行各种网络请求目录[TOC] 前言关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。本文所用的一切代码都是继续Retrofit2.0">
   
-    <link rel="alternative" href="/atom.xml" title="Disky Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Disky 的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,14 +43,14 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #1C86EE"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="http://i1.bvimg.com/605549/e48791ebd5e94636.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">张淏松</a></h1>
+		  <h1 class="header-author"><a href="/">DiskyZhs</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">活在当下</p>
@@ -61,18 +61,12 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -83,13 +77,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="github" target="_blank" href="https://github.com/DiskyZhs" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="jianshu" target="_blank" href="http://blog.csdn.net/zhs4430169" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 			</div>
 		</nav>
@@ -100,17 +92,17 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #1C86EE"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="http://i1.bvimg.com/605549/e48791ebd5e94636.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">张淏松</h1>
+			  <h1 class="header-author js-header-author">DiskyZhs</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>活在当下<i class="icon icon-quo-right"></i></p>
@@ -119,20 +111,16 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="github" target="_blank" href="https://github.com/DiskyZhs" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="jianshu" target="_blank" href="http://blog.csdn.net/zhs4430169" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 				</div>
 			</nav>
@@ -141,9 +129,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -237,27 +223,6 @@
       
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
     </div>
     <div class="article-info article-info-index">
       
@@ -323,7 +288,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/12/22/利用Retrofit进行各种网络请求/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhanghaosong.com/2016/12/22/利用Retrofit进行各种网络请求/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -368,6 +333,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#利用Retrofit进行各种网络请求"><span class="toc-number">1.</span> <span class="toc-text">利用Retrofit进行各种网络请求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.3.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Retrofit的基本使用"><span class="toc-number">1.4.</span> <span class="toc-text">Retrofit的基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建基本HttpClient"><span class="toc-number">1.4.1.</span> <span class="toc-text">创建基本HttpClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#封装接口"><span class="toc-number">1.4.2.</span> <span class="toc-text">封装接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求示例"><span class="toc-number">1.4.3.</span> <span class="toc-text">请求示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不同的网络请求"><span class="toc-number">1.5.</span> <span class="toc-text">不同的网络请求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求地址中包含变量"><span class="toc-number">1.5.1.</span> <span class="toc-text">请求地址中包含变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求地址中包含查询变量"><span class="toc-number">1.5.2.</span> <span class="toc-text">请求地址中包含查询变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传Json-上传实体"><span class="toc-number">1.5.3.</span> <span class="toc-text">上传Json/上传实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form提交，提交参数"><span class="toc-number">1.5.4.</span> <span class="toc-text">Form提交，提交参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上传单个文件"><span class="toc-number">1.5.5.</span> <span class="toc-text">上传单个文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多表单提交（参数和文件混合）"><span class="toc-number">1.5.6.</span> <span class="toc-text">多表单提交（参数和文件混合）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Http请求Header的设置"><span class="toc-number">1.6.</span> <span class="toc-text">Http请求Header的设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#固定Header设置"><span class="toc-number">1.6.1.</span> <span class="toc-text">固定Header设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Header中带有变量"><span class="toc-number">1.6.2.</span> <span class="toc-text">Header中带有变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用OkHttp-interceptor添加Header"><span class="toc-number">1.6.3.</span> <span class="toc-text">使用OkHttp interceptor添加Header</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件下载"><span class="toc-number">1.7.</span> <span class="toc-text">文件下载</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -382,6 +360,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://zhanghaosong.com/2016/12/22/利用Retrofit进行各种网络请求/",
+  owner: 'DiskyZhs',
+  repo: 'DiskyZhs.github.io',
+  oauth: {
+    client_id: 'bb7fbd3161272f191944',
+    client_secret: 'b3c306a5ccd3dac6e9fdc2b2c1182a04e8eada74',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -391,7 +385,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 张淏松
+    		&copy; 2017 DiskyZhs
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -412,7 +406,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -435,25 +429,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -474,15 +460,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Android 音视频 滤镜 硬解码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">android bitmap 图片处理</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据库 openfire搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Android 音视频 滤镜 硬解码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,43 +527,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;  张淏松&lt;br&gt;Android 程序猿&lt;br&gt;  仍需努力</div>
   	  	
     	</section>
     
