@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhanghaosong.com">
-  <title>Disky 的博客</title>
+  <title>Camera Filter 美颜相机的实现 | Disky 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android 程序猿一枚">
-<meta name="keywords" content="Android,程序猿">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Disky 的博客">
-<meta property="og:url" content="http://zhanghaosong.com/index.html">
+  <meta name="description" content="前言当你需要实现Camera 添加滤镜的预览以及录制的时候，那么你可以看过来了！在这里会给你讲解基于opengl的Camera滤镜的实现。 之前已经介绍过了视频编解码以及渲染的相关概念了，详见Android视频滤镜添加硬解码方案 当然如果你只是想要简单的进行Camera预览以及拍照的话，推荐google的CameraV">
+<meta name="keywords" content="android camera filter recoeder">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Camera Filter 美颜相机的实现">
+<meta property="og:url" content="http://zhanghaosong.com/2017/11/22/Camera滤镜的添加/index.html">
 <meta property="og:site_name" content="Disky 的博客">
-<meta property="og:description" content="Android 程序猿一枚">
+<meta property="og:description" content="前言当你需要实现Camera 添加滤镜的预览以及录制的时候，那么你可以看过来了！在这里会给你讲解基于opengl的Camera滤镜的实现。 之前已经介绍过了视频编解码以及渲染的相关概念了，详见Android视频滤镜添加硬解码方案 当然如果你只是想要简单的进行Camera预览以及拍照的话，推荐google的CameraView，简单兼容性好。轻松玩转Camera,使用CameraView来拍照，修改">
+<meta property="og:updated_time" content="2017-11-23T01:28:29.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Disky 的博客">
-<meta name="twitter:description" content="Android 程序猿一枚">
+<meta name="twitter:title" content="Camera Filter 美颜相机的实现">
+<meta name="twitter:description" content="前言当你需要实现Camera 添加滤镜的预览以及录制的时候，那么你可以看过来了！在这里会给你讲解基于opengl的Camera滤镜的实现。 之前已经介绍过了视频编解码以及渲染的相关概念了，详见Android视频滤镜添加硬解码方案 当然如果你只是想要简单的进行Camera预览以及拍照的话，推荐google的CameraView，简单兼容性好。轻松玩转Camera,使用CameraView来拍照，修改">
   
     <link rel="alternative" href="/atom.xml" title="Disky 的博客" type="application/atom+xml">
   
@@ -143,16 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Camera滤镜的添加" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Camera滤镜的添加" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/22/Camera滤镜的添加/">Camera Filter 美颜相机的实现</a>
+    <h1 class="article-title" itemprop="name">
+      Camera Filter 美颜相机的实现
     </h1>
   
 
@@ -170,9 +169,18 @@
 <p>当然如果你只是想要简单的进行Camera预览以及拍照的话，推荐google的CameraView，简单兼容性好。<br><a href="http://blog.csdn.net/zhs4430169/article/details/76502217" target="_blank" rel="noopener">轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率</a></p>
 <p>如果需要Camera的预览以及录制，并不需要添加滤镜特效的话，那么原生API，Camera + MediaRecorder就能搞定。<br><br>推荐开源项目<a href="https://opencamera.sourceforge.io/" target="_blank" rel="noopener">opencamera</a></p>
 <p>对于Camera Filter的添加以及MP4视屏Filter的添加，自己这里写了一个开源项目<br><a href="https://github.com/DiskyZhs/PinFilter" target="_blank" rel="noopener">PinFilter</a><br>你可以直接使用。</p>
-        
-          <a class="article-more-a" href="/2017/11/22/Camera滤镜的添加/#more">more >></a>
-        
+<a id="more"></a>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>Camera的setPreview设置Preview输出的时候可以是SurfaceHolder也可以是SurfaceTexture，必须使用SurfaceTexture，<br>只有通过SurfaceTexture获取到Camera输出数据然后一方面通过OpenGl对输出的图像进行加工然后渲染，这一部分的实现<br>可以参考Grafika的MoviePlayer的实现。<br>当你需要录制添加滤镜的视频的时候，你必须在同一个Opengl环境下也就是EGl对象下面将SurfaceTexture中的texture通过<br>opengl渲染然后送给MediaCodec（Encoder）进行编码然后送入MediaMuxer重新生成MP4视频文件。</p>
+<p>为什么不用SurfaceHolder作为输出？<br>SurfaceHolder是关联SurfaceView，Camera的数据会直接送给SurfaceView的Surface<br>进行渲染，无法取得图像数据进行再处理。</p>
+<p>为什么不在Camera的onPreviewFrame(byte[] data, Camera camera)取得图像数据，然后进行处理图像添加滤镜再送去渲染？<br>原因是效率问题，onPreviewFrame回调中取得的是Yuv格式的图像，而送入渲染的无论是SurfaceView还是Canvas绘制等<br>方法需要的是RGB的颜色格式，这也就意味着要实现这些必须先将Yuv颜色格式转化为RGB，然后将RGB进行添加滤镜处理<br>然后渲染，无论这部分转化处理操作是Java实现还是利用Jni，C来实现（事实上快一点）都会比较慢，同时这些处理是<br>跑在Cpu上面的，内存里面的，也就意味着更大的资源消耗。<br>而利用Opengl对SurfaceTexture中的图像数据进行处理采用GLSL语言，这一切都是在gpu中完成的，所以这无疑是效率<br>最高的方式。</p>
+<p>为什么使用MediaCodec以及MediaMuxer？<br>因为MediaCodec是属于硬件编解码，效率最高！但是需要Android 4.3+支持，当然你也可以使用ffmpeg等软编码方案来<br>替代后半部分的录制功能！</p>
+<p>SurfaceView，GlSurfaceView还是TextureView作为Camera Preview的渲染显示？<br>首先由于需要支持Opengl所以GlSurfaceView无疑是最优先的选择，但是TextureView拥有View的平移旋转等特性，更关<br>键的是在ScrollView，ViewPager等控件中只有TextureView才不会出现滑动黑边等问题，所以TextureView才是视频渲染<br>最好的载体。<br>为了使TextureView支持OpenGl，就必须仿照GlSurfaceView自己进行创建EGL，创建GlThread进行渲染，具体的实现可以<br>参考<br><a href="https://github.com/DiskyZhs/PinFilter/blob/master/libRecorderEditor/src/main/java/com/pinssible/librecorder/view/GLTextureView.java" target="_blank" rel="noopener">GlTextureView</a><br><a href="https://github.com/DiskyZhs/PinFilter/tree/master/libRecorderEditor/src/main/java/com/pinssible/librecorder/gles" target="_blank" rel="noopener">gles</a><br>或者开源项目<a href="https://github.com/ChillingVan/android-openGL-canvas" target="_blank" rel="noopener">android-openGL-canvas</a></p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>无论是GlSurfaceView还是GlTextureView的核心都是实现Render接口，即<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">onSurfaceCreated</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">onSurfaceChanged</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">onDrawFrame</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>也就是在<strong>onSurfaceCreated</strong>与<strong>onSurfaceChanged</strong>进行初始化操作，在<strong>onDrawFrame</strong><br>中完成对与图像的绘制，滤镜添加以及视频录制功能的实现。</p>
+<p>话不多说，直接上Render的代码核心代码，要想了解全部的代码可以去<br><a href="https://github.com/DiskyZhs/PinFilter" target="_blank" rel="noopener">PinFilter</a> 找。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>感觉非常抱歉，本来是将相关的核心的代码贴出来，逐一进行分析的，实际写的时候发现，要贴出的代码过多，而以我苍白的语言<br>怎么也解释不完全，雾里看花水里看月！所以推荐大家还是分析代码吧！关键部分都有注释！</p>
+<p>Camera这一部分的实现实际上是对开源项目<br><a href="https://github.com/Kickflip/kickflip-android-sdk" target="_blank" rel="noopener">kickflip-android-sdk</a>以及<br><a href="https://github.com/CyberAgent/android-gpuimage" target="_blank" rel="noopener">android-gpuimage</a>的借鉴和再封装，<br>特别感谢！</p>
+
       
 
       
@@ -194,16 +202,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/22/Camera滤镜的添加/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhanghaosong.com/2017/11/22/Camera滤镜的添加/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/21/Android视频滤镜添加硬解码方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android 滤镜添加硬解码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,581 +290,30 @@
 
 
 
-
-  
-    <article id="post-Android视频滤镜添加硬解码方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/Android视频滤镜添加硬解码方案/">Android 滤镜添加硬解码</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/21/Android视频滤镜添加硬解码方案/" class="archive-article-date">
-  	<time datetime="2017-11-21T07:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于工作的需求，研究过了一段时间的Android 的音视频播放渲染以及编辑方面的知识，这里就自己一些浅薄的了解对所了解做一个简单的介绍和记录，如有不对的地方请指正!同时也会记录下硬件解码的情况下完成滤镜的添加。</p>
-<p>这里以MP4格式的视频作为介绍，因为在实际的移动开发中，传输播放渲染的基本都是MP4文件。</p>
-<p>这里先介绍一些基础概念，当理解了这些，再去查看以及学习关于音视频的一些著名开源项目，如Grafika，ExoPlayer，IJKPlayer，GPUImage等开源项目学习会更加方便！</p>
-<p>安利一下自己的库，基于MediaCodec的硬件解码的添加滤镜的库<br><a href="https://github.com/DiskyZhs/PinFilter" target="_blank" rel="noopener">PinFilter</a><br>实现了滤镜的添加，预览，播放，录制功能。</p>
-        
-          <a class="article-more-a" href="/2017/11/21/Android视频滤镜添加硬解码方案/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android 音视频 滤镜 硬解码</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/21/Android视频滤镜添加硬解码方案/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/">轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/" class="archive-article-date">
-  	<time datetime="2017-05-10T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于拍照功能来说，Android 由于版本不同可以使用不同的书写方式，光API就有Camera和Camera2两套，其余的区别还有</p>
-<table>
-<thead>
-<tr>
-<th>API Level</th>
-<th style="text-align:center">Camera API</th>
-<th style="text-align:right">Preview View</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>9-13</td>
-<td style="text-align:center">Camera1</td>
-<td style="text-align:right">SurfaceView</td>
-</tr>
-<tr>
-<td>14-20</td>
-<td style="text-align:center">Camera1</td>
-<td style="text-align:right">TextureView</td>
-</tr>
-<tr>
-<td>21-23</td>
-<td style="text-align:center">Camera2</td>
-<td style="text-align:right">TextureView</td>
-</tr>
-<tr>
-<td>24</td>
-<td style="text-align:center">Camera2</td>
-<td style="text-align:right">SurfaceView</td>
-</tr>
-</tbody>
-</table>
-<p><br><br>虽然Android能够向下兼容，但是谁不想使用更新的API和技术，另一方面，Camera API调用起来也不方便，所以对Camera调用的封装势在必行。<br><br><br>github上面有一些，但是使用时经常出现兼容性，适配等问题，直到发现了Google自己封装的CameraView，地址：<br><a href="https://github.com/google/cameraview" target="_blank" rel="noopener">https://github.com/google/cameraview</a><br>
-        
-          <a class="article-more-a" href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">camera2 api android CameraView 拍照</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/10/轻松玩转Camera,使用CameraView来拍照，修改CameraView 实现自定义拍照分辨率/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BitmapEditor 高效优雅的的Android图片压缩框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/">BitmapEditor 高效优雅的的Android图片压缩框架</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/" class="archive-article-date">
-  	<time datetime="2017-05-08T10:02:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>BitmapEditor是一款高效简单的图片压缩处理工具，它可以做到:</p>
-<ul>
-<li>接收来自File，Bitmap，ResId，ByteBuffer，byte[]中的图像数据然后转换为<br>byte[]，Bitmap，File</li>
-<li>对图片进行分辨率缩放</li>
-<li>对图片进行内存大小的压缩</li>
-<li>对图片进行颜色格式的改变</li>
-</ul>
-<p> 为什么使用它？它的有点有：</p>
-<ul>
-<li>响应式函数设计(参考Glide的设计)，调用方便</li>
-<li>对处理过程了同步，异步</li>
-<li><p>方便导入使用</p>
-        
-          <a class="article-more-a" href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">android bitmap 图片处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/08/BitmapEditor 高效优雅的的Android图片压缩框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/">Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/" class="archive-article-date">
-  	<time datetime="2017-03-30T02:47:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.配置Openfire完成后，修改Openfire安装目录下的Openfire\conf\openfire.xml文件中的setup标签修改为false，然后重启openfire（stop –&gt;start–&gt;Lanunch Admin），可以重新配置Openfire<br><img src="http://img.blog.csdn.net/20170330103948552?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhzNDQzMDE2OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="openfire.xml"></p>
-        
-          <a class="article-more-a" href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据库 openfire搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/30/Openfire 服务器搭建问题记录(重新配置以及修改管理员密码)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-利用Retrofit进行各种网络请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/22/利用Retrofit进行各种网络请求/">利用Retrofit进行各种网络请求</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/22/利用Retrofit进行各种网络请求/" class="archive-article-date">
-  	<time datetime="2016-12-22T09:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="利用Retrofit进行各种网络请求"><a href="#利用Retrofit进行各种网络请求" class="headerlink" title="利用Retrofit进行各种网络请求"></a>利用Retrofit进行各种网络请求</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于Retrofit的优点，原理以及基本使用网上已经有很多相关的资料，但是自己实际使用的时候发现，比如多表单提交数据，比如上传动态数目图片等一些应用场景，官方文档以及网上并没有给出很好的解释和例子，在自己摸索一番后，特地记录下来并分享。<br>本文所用的一切代码都是继续Retrofit2.0</p>
-        
-          <a class="article-more-a" href="/2016/12/22/利用Retrofit进行各种网络请求/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">android retrofit http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/22/利用Retrofit进行各种网络请求/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-简单的Android中MVP模式的应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/10/简单的Android中MVP模式的应用/">简单的Android中MVP模式的应用</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/10/简单的Android中MVP模式的应用/" class="archive-article-date">
-  	<time datetime="2016-10-10T11:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近感觉自己的代码耦合性太高，打算重构一下自己代码的时候，于是花了两天的时间研究了一下MVP模式在Android中的应用。这里特地的记录一下所学。</p>
-<p>什么叫做MVP模式？MVP模式的原理？这些这里推荐一片博文：<a href="http://www.jianshu.com/p/9a6845b26856写的很好，同时里面也记录了一些实现MVP模式的其他思路。" target="_blank" rel="noopener">http://www.jianshu.com/p/9a6845b26856写的很好，同时里面也记录了一些实现MVP模式的其他思路。</a></p>
-        
-          <a class="article-more-a" href="/2016/10/10/简单的Android中MVP模式的应用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">android mvp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/10/简单的Android中MVP模式的应用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-smack android集成问题记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/25/smack android集成问题记录/">smack android集成问题记录</a>
-    </h1>
-  
-
-        
-        <a href="/2016/08/25/smack android集成问题记录/" class="archive-article-date">
-  	<time datetime="2016-08-25T02:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近使用的项目中需要集成即时通讯，故使用smack 4.1.0 作为集成，集成方法见<br><a href="https://github.com/igniterealtime/Smack/wiki/Smack-4.1-Readme-and-Upgrade-Guide" target="_blank" rel="noopener">https://github.com/igniterealtime/Smack/wiki/Smack-4.1-Readme-and-Upgrade-Guide</a><br>由于并不懂的新xmpp协议，所有先写个Demo来测试一下功能，有一些坑，特此记录一下：<br>
-        
-          <a class="article-more-a" href="/2016/08/25/smack android集成问题记录/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/08/25/smack android集成问题记录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://zhanghaosong.com/2017/11/22/Camera滤镜的添加/",
+  owner: 'DiskyZhs',
+  repo: 'DiskyZhs.github.io',
+  oauth: {
+    client_id: 'bb7fbd3161272f191944',
+    client_secret: 'b3c306a5ccd3dac6e9fdc2b2c1182a04e8eada74',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -820,8 +336,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
