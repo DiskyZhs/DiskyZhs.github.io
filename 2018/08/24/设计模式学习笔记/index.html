@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhanghaosong.com">
-  <title>Archives: 2017/12 | Disky 的博客</title>
+  <title>设计模式学习笔记 | Disky 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android 程序猿一枚">
-<meta name="keywords" content="Android,程序猿">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Disky 的博客">
-<meta property="og:url" content="http://zhanghaosong.com/archives/2017/12/index.html">
+  <meta name="description" content="设计模式学习笔记 设计模式（Design pattern）的使用是为了重用代码、让代码更容易被他人理解、保证代码可靠性。个人理解：设计模式的使用更多的是为了解耦，代码的可扩展性以及稳定性，可阅读性并不一定得到了提高（相反过多的封装会是可阅读性变得更差）。 这个笔记的更多理解来自与设计模式简介以及个人的补充，只是学习的一">
+<meta name="keywords" content="设计模式 java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式学习笔记">
+<meta property="og:url" content="http://zhanghaosong.com/2018/08/24/设计模式学习笔记/index.html">
 <meta property="og:site_name" content="Disky 的博客">
-<meta property="og:description" content="Android 程序猿一枚">
+<meta property="og:description" content="设计模式学习笔记 设计模式（Design pattern）的使用是为了重用代码、让代码更容易被他人理解、保证代码可靠性。个人理解：设计模式的使用更多的是为了解耦，代码的可扩展性以及稳定性，可阅读性并不一定得到了提高（相反过多的封装会是可阅读性变得更差）。 这个笔记的更多理解来自与设计模式简介以及个人的补充，只是学习的一个记录和整理，方便以后进行系统设计时候的查阅理解。这里的理解与举例更多的是以Ja">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1535083441157&di=3f6ea89ac4dab1f44eac84d1321e3738&imgtype=jpg&src=http://h.hiphotos.baidu.com/image/pic/item/d53f8794a4c27d1e05eae0f816d5ad6eddc4383a.jpg">
+<meta property="og:updated_time" content="2018-08-24T02:32:09.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Disky 的博客">
-<meta name="twitter:description" content="Android 程序猿一枚">
+<meta name="twitter:title" content="设计模式学习笔记">
+<meta name="twitter:description" content="设计模式学习笔记 设计模式（Design pattern）的使用是为了重用代码、让代码更容易被他人理解、保证代码可靠性。个人理解：设计模式的使用更多的是为了解耦，代码的可扩展性以及稳定性，可阅读性并不一定得到了提高（相反过多的封装会是可阅读性变得更差）。 这个笔记的更多理解来自与设计模式简介以及个人的补充，只是学习的一个记录和整理，方便以后进行系统设计时候的查阅理解。这里的理解与举例更多的是以Ja">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1535083441157&di=3f6ea89ac4dab1f44eac84d1321e3738&imgtype=jpg&src=http://h.hiphotos.baidu.com/image/pic/item/d53f8794a4c27d1e05eae0f816d5ad6eddc4383a.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Disky 的博客" type="application/atom+xml">
   
@@ -143,60 +146,454 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-设计模式学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/06/Parse后台搭建与运行基于Windows平台/" class="archive-article-date">
-  	<time datetime="2017-12-06T11:34:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/06/Parse后台搭建与运行基于Windows平台/">Parse后台搭建与运行基于Windows平台</a>
+    <h1 class="article-title" itemprop="name">
+      设计模式学习笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/24/设计模式学习笔记/" class="archive-article-date">
+  	<time datetime="2018-08-24T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="设计模式学习笔记"><a href="#设计模式学习笔记" class="headerlink" title="设计模式学习笔记"></a>设计模式学习笔记</h1><hr>
+<p>设计模式（Design pattern）的使用是为了重用代码、让代码更容易被他人理解、保证代码可靠性。个人理解：设计模式的使用更多的是为了解耦，代码的可扩展性以及稳定性，可阅读性并不一定得到了提高（相反过多的封装会是可阅读性变得更差）。</p>
+<p>这个笔记的更多理解来自与<a href="http://www.runoob.com/design-pattern/design-pattern-intro.html" target="_blank" rel="noopener">设计模式简介</a>以及个人的补充，只是学习的一个记录和整理，方便以后进行系统设计时候的查阅理解。这里的理解与举例更多的是以Java为主，可能更偏向J2EE。</p>
+<a id="more"></a>
+<hr>
+<p>[TOC]</p>
+<hr>
+<p>提前送上自己总结的可以查阅的表<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80%20&amp;size=b10000_10000&amp;sec=1535083441157&amp;di=3f6ea89ac4dab1f44eac84d1321e3738&amp;imgtype=jpg&amp;src=http://h.hiphotos.baidu.com/image/pic/item/d53f8794a4c27d1e05eae0f816d5ad6eddc4383a.jpg" alt="设计模式查阅"></p>
+<h2 id="设计模式的类型"><a href="#设计模式的类型" class="headerlink" title="设计模式的类型"></a>设计模式的类型</h2><p>   在<a href="http://www.runoob.com/design-pattern/design-pattern-intro.html" target="_blank" rel="noopener">设计模式简介</a>有更详细的介绍，简单地说就是：</p>
+<ul>
+<li>创建型模式（Creational Patterns）–&gt;对象怎么来 </li>
+<li>结构型模式（Structural Patterns）–&gt;对象和谁有关 </li>
+<li>行为型模式（Behavioral Patterns）–&gt;对象与对象在干嘛</li>
+</ul>
+<h2 id="设计模式的原则"><a href="#设计模式的原则" class="headerlink" title="设计模式的原则"></a>设计模式的原则</h2><p>   在<a href="http://www.runoob.com/design-pattern/design-pattern-intro.html" target="_blank" rel="noopener">设计模式简介</a>有更详细的介绍，简单地说就是：</p>
+<ul>
+<li>开闭原则：实现热插拔，提高扩展性。</li>
+<li>里氏代换原则：实现抽象的规范，实现子父类互相替换；</li>
+<li>依赖倒转原则：针对接口编程，实现开闭原则的基础；</li>
+<li>接口隔离原则：降低耦合度，接口单独设计，互相隔离；</li>
+<li>迪米特法则，又称不知道原则：功能模块尽量独立；</li>
+<li>合成复用原则：尽量使用聚合，组合，而不是继承；</li>
+</ul>
+<hr>
+<h2 id="设计模式的理解"><a href="#设计模式的理解" class="headerlink" title="设计模式的理解"></a>设计模式的理解</h2><p>   在<a href="http://www.runoob.com/design-pattern/design-pattern-intro.html" target="_blank" rel="noopener">设计模式简介</a>有更详细的介绍，这里只会补充记录这些设计模式的使用时机和个人理解，部分模式会补充下简单的实现方案。</p>
+<hr>
+<h3 id="创建型模式（Creational-Patterns）"><a href="#创建型模式（Creational-Patterns）" class="headerlink" title="创建型模式（Creational Patterns）"></a>创建型模式（Creational Patterns）</h3><p>主要就是怎么创建一个对象，简单的概括就是<strong>全局使用的时候走单例模式，多个子类的时候使用工厂模式，Src父类由多个不同的部分构成的时候使用建造者模式，创建一个对象成本过高的时候，建议同个Clone的方式拿到副本的时候使用原型模式</strong>。</p>
+<hr>
+<h4 id="工厂模式（Factory-Patterns）"><a href="#工厂模式（Factory-Patterns）" class="headerlink" title="工厂模式（Factory Patterns）"></a>工厂模式（Factory Patterns）</h4><ul>
+<li>意图：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</li>
+<li>何时使用：我们明确地计划不同条件下创建不同实例时。</li>
+</ul>
+<hr>
+<h4 id="单例模式（Singleton-Pattern）"><a href="#单例模式（Singleton-Pattern）" class="headerlink" title="单例模式（Singleton Pattern）"></a>单例模式（Singleton Pattern）</h4><ul>
+<li>意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。</li>
+<li>主要解决：一个全局使用的类频繁地创建与销毁。</li>
+<li>何时使用：当您想控制实例数目，节省系统资源的时候。</li>
+<li>注意：单例模式的7中写法，最简单的enum枚举类，以及比较常见简单的静态内部类，常见的双重检验锁的写法（注意static实例要添加volatile关键字，为什么这么干很重要），还有饿汉式和懒汉式的区别。</li>
+</ul>
+<hr>
+<h4 id="建造者模式（Builder-Pattern）"><a href="#建造者模式（Builder-Pattern）" class="headerlink" title="建造者模式（Builder Pattern）"></a>建造者模式（Builder Pattern）</h4><ul>
+<li>意图：将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示。</li>
+<li>何时使用：一些基本部件不会变，而其组合经常变化的时候。</li>
+<li>关键代码：建造者：创建和提供实例，导演：管理建造出来的实例的依赖关系。</li>
+<li>PS:这里比起标准的建造者模式有个更常见的省略掉director这个部分以及Builder接口的简化的链式使用。使用情况如下，具体实现就是很简单，不细说，自己查询：</li>
+</ul>
+<pre><code>Computer c = new MiniWomwComputerBuilder()
+        .buildCpu(&quot;i7-2500&quot;)
+        .buildMainBoard(&quot;ARM&quot;)
+        .buildRam(&quot;Sumgsung&quot;)
+        .buildSystem(&quot;MacOs&quot;)
+        .create(
+</code></pre><hr>
+<h4 id="原型模式（Prototype-Pattern）"><a href="#原型模式（Prototype-Pattern）" class="headerlink" title="原型模式（Prototype Pattern）"></a>原型模式（Prototype Pattern）</h4><ul>
+<li>意图：用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</li>
+<li>主要解决：在运行期建立和删除原型。</li>
+<li>何时使用：<br>1、当一个系统应该独立于它的产品创建，构成和表示时。 2、当要实例化的类是在运行时刻指定时，例如，通过动态装载。 3、为了避免创建一个与产品类层次平行的工厂类层次时。 4、当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些。</li>
+<li>使用场景： 1、资源优化场景。 2、类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 3、性能和安全要求的场景。 4、通过 new 产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。 5、一个对象多个修改者的场景。 6、一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时，可以考虑使用原型模式拷贝多个对象供调用者使用。 7、在实际项目中，原型模式很少单独出现，一般是和工厂方法模式一起出现，通过 clone 的方法创建一个对象，然后由工厂方法提供给调用者。原型模式已经与 Java 融为浑然一体，大家可以随手拿来使用。</li>
+<li>注意事项：与通过对一个类进行实例化来构造新对象不同的是，原型模式是通过拷贝一个现有对象生成新对象的。浅拷贝实现 Cloneable，重写，深拷贝是通过实现 Serializable 读取二进制流。</li>
+</ul>
+<hr>
+<h3 id="结构型模式（Structural-Patterns）"><a href="#结构型模式（Structural-Patterns）" class="headerlink" title="结构型模式（Structural Patterns）"></a>结构型模式（Structural Patterns）</h3><p>结构型的设计模式，个人感觉更多的是在已知的对象上面进行扩展以及关联，最主要的是<br>将<strong>继承的概念被用来组合接口和定义组合对象获得新功能的方式</strong>。<br>结构型的设计模式目的是设计对象的结构、继承和依赖关系</p>
+<hr>
+<h4 id="适配器模式（Adapter-Pattern）"><a href="#适配器模式（Adapter-Pattern）" class="headerlink" title="适配器模式（Adapter Pattern）"></a>适配器模式（Adapter Pattern）</h4><ul>
+<li>意图：将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</li>
+<li>主要解决：主要解决在软件系统中，常常要将一些”现存的对象”放到新的环境中，而新环境要求的接口是现对象不能满足的。</li>
+<li>常见实现方式：<br>根据 src类是以怎样的形式给到Adapter（在Adapter里的形式）来命名的。<ul>
+<li>类适配器，以类给到，在Adapter里，就是将src当做类，继承，</li>
+<li>对象适配器，以对象给到，在Adapter里，将src作为一个对象，持有。</li>
+<li>接口适配器，以接口给到，在Adapter里，将src作为一个接口，实现。</li>
+</ul>
+</li>
+</ul>
+<p>Adapter模式最大的作用还是将原本不兼容的接口融合在一起工作。但是在实际开发中，实现起来不拘泥于本文介绍的三种经典形式。<br>例如Android中ListView、GridView的适配器Adapter，就不是以上三种经典形式之一，<br>我个人理解其属于对象适配器模式，一般日常使用中，我们都是在Adapter里持有datas，然后通过getView()/onCreateViewHolder()方法向ListView/RecyclerView提供View/ViewHolder。</p>
+<ul>
+<li>注意：：<strong>对象适配器以及接口适配器比较常见，持有对src Data的引用，转换为可以用来被Dst所使用DSt.setSrc变为Dst.setAdapter</strong>(这也就是说为了解耦，接触Dst对Src的继承或者持有的话，目标类Dst通常是setAdapter来进行获取Adapter然后再调用Adapter中方法来进行数据转化，目的还是为了解耦)</li>
+</ul>
+<hr>
+<h4 id="桥接模式（Bridge-Pattern）"><a href="#桥接模式（Bridge-Pattern）" class="headerlink" title="桥接模式（Bridge Pattern）"></a>桥接模式（Bridge Pattern）</h4><ul>
+<li>意图：将抽象部分与实现部分分离，使它们都可以独立的变化。</li>
+<li>主要解决：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</li>
+<li>何时使用：实现系统可能有多个角度分类，每一种角度都可能变化。</li>
+<li>关键代码：抽象类依赖实现类。</li>
+<li>使用场景： 1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。 2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。 3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。</li>
+<li>注意事项：对于两个独立变化的维度，使用桥接模式再适合不过了</li>
+</ul>
+<hr>
+<h4 id="过滤器模式（Filter-Pattern）"><a href="#过滤器模式（Filter-Pattern）" class="headerlink" title="过滤器模式（Filter Pattern）"></a>过滤器模式（Filter Pattern）</h4><p>过滤器模式（Filter Pattern）或标准模式（Criteria Pattern）是一种设计模式，这种模式允许开发人员使用不同的标准来过滤一组对象，通过逻辑运算以解耦的方式把它们连接起来。这种类型的设计模式属于结构型模式，它结合多个标准来获得单一标准。</p>
+<ul>
+<li>理解：当有多个过滤标准条件的时候，提出公用的Filter接口就好了。就是将过滤方法抽象出来作为一个类就好了</li>
+</ul>
+<hr>
+<h4 id="组合模式（Composite-Pattern）"><a href="#组合模式（Composite-Pattern）" class="headerlink" title="组合模式（Composite Pattern）"></a>组合模式（Composite Pattern）</h4><p>组合模式（Composite Pattern），又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。</p>
+<ul>
+<li><p>意图：将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+</li>
+<li><p>主要解决：它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以向处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。</p>
+</li>
+<li><p>关键代码：树枝内部组合该接口，并且含有内部属性 List，里面放 Component。</p>
+</li>
+<li><p>使用场景：部分、整体场景，如树形菜单，文件、文件夹的管理。</p>
+</li>
+<li><p>理解：解决树形结构，实现就是包含自己类的List</p>
+</li>
+</ul>
+<hr>
+<h4 id="装饰器模式（Decorator-Pattern）"><a href="#装饰器模式（Decorator-Pattern）" class="headerlink" title="装饰器模式（Decorator Pattern）"></a>装饰器模式（Decorator Pattern）</h4><ul>
+<li>意图：动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。</li>
+<li>何时使用：在不想增加很多子类的情况下扩展类。</li>
+<li>使用场景： 1、扩展一个类的功能。 2、动态增加功能，动态撤销。</li>
+<li>注意事项：可代替继承。</li>
+<li>理解：<br>1.首先，装饰器的价值在于装饰，他并不影响被装饰类本身的核心功能。在一个继承的体系中，子类通常是互斥的。比如一辆车，品牌只能要么是奥迪、要么是宝马，不可能同时属于奥迪和宝马，而品牌也是一辆车本身的重要属性特征。但当你想要给汽车喷漆，换坐垫，或者更换音响时，这些功能是互相可能兼容的，并且他们的存在不会影响车的核心属性：那就是他是一辆什么车。这时你就可以定义一个装饰器：喷了漆的车。不管他装饰的车是宝马还是奥迪，他的喷漆效果都可以实现。<br>2.自己常用的wrapper的写法也算是这个.<br>3.简单的从意图上入手增加功能额外职责，wrapper模式显然更合适</li>
+</ul>
+<hr>
+<h4 id="外观模式（Facade-Pattern）"><a href="#外观模式（Facade-Pattern）" class="headerlink" title="外观模式（Facade Pattern）"></a>外观模式（Facade Pattern）</h4><ul>
+<li>意图：为子系统中的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</li>
+<li>主要解决：降低访问复杂系统的内部子系统时的复杂度，简化客户端与之的接口。</li>
+<li>何时使用： 1、客户端不需要知道系统内部的复杂联系，整个系统只需提供一个”接待员”即可。 2、定义系统的入口。</li>
+<li>关键代码：在客户端和复杂系统之间再加一层，这一层将调用顺序、依赖关系等处理好。</li>
+<li>使用场景：1、为复杂的模块或子系统提供外界访问的模块。 2、子系统相对独立。 3、预防低水平人员带来的风险。</li>
+<li>注意事项：在层次化结构中，可以使用外观模式定义系统中每一层的入口。</li>
+<li>理解：同建造者的工厂模式有类似的地方，只不过外观模式是为了更方便的调用不同子类的方法。</li>
+</ul>
+<hr>
+<h4 id="享元模式（Flyweight-Pattern）"><a href="#享元模式（Flyweight-Pattern）" class="headerlink" title="享元模式（Flyweight Pattern）"></a>享元模式（Flyweight Pattern）</h4><p>享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。<br>享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。</p>
+<ul>
+<li>意图：运用共享技术有效地支持大量细粒度的对象。</li>
+<li>主要解决：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。</li>
+<li>如何解决：用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象。</li>
+<li>关键代码：用 HashMap 存储这些对象。</li>
+<li>应用实例： 1、JAVA 中的 String，如果有则返回，如果没有则创建一个字符串保存在字符串缓存池里面。 2、数据库的数据池。</li>
+<li>优点：大大减少对象的创建，降低系统的内存，使效率提高。</li>
+<li>缺点：提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，不应该随着内部状态的变化而变化，否则会造成系统的混乱。</li>
+<li>使用场景： 1、系统有大量相似对象。 2、需要缓冲池的场景。</li>
+<li>注意事项： 1、注意划分外部状态和内部状态，否则可能会引起线程安全问题。 2、这些类必须有一个工厂对象加以控制。</li>
+<li>理解：使用到缓冲池的情况下会常用，本质就是将创建复杂消耗内存以及时间的对象进行缓存，利用hashMap进行存储下来。（常见的实现就是在Factory类中添加map）</li>
+</ul>
+<hr>
+<h4 id="代理模式（Proxy-Pattern）"><a href="#代理模式（Proxy-Pattern）" class="headerlink" title="代理模式（Proxy Pattern）"></a>代理模式（Proxy Pattern）</h4><ul>
+<li>意图：为其他对象提供一种代理以控制对这个对象的访问。</li>
+<li>何时使用：想在访问一个类时做一些控制。</li>
+<li>如何解决：增加中间层。</li>
+<li>关键代码：实现与被代理类组合。</li>
+<li>理解：</li>
+</ul>
+<ol>
+<li>和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。</li>
+<li>和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。（都是持有Src对象，但是Proxy模式的目的在于控制Src的执行）</li>
+<li>代理模式中，代理类对被代理的对象有控制权，决定其执行或者不执行。而装饰模式中，装饰类对代理对象没有控制权，只能为其增加一层装饰，以加强被装饰对象的功能，仅此而已。</li>
+<li>代理模式使用到极致开发就是AOP， 这是各位采用Spring架构开发必然要使用到的技术(Spring学习之第一个AOP程序)，它就是使用了代理和反射的技术。</li>
+<li>一般情况下要求代理对象也实现Src对象的接口，JAVA中可以基于java.lang.reflect.Proxy中newProxyInstance 方法来自己进行代理而不必（动态代理了解一下）</li>
+<li>代理模式可以做一些方法的拦截和处理（多用于对于第三方，不方便自己处理的改造，特别是动态代理）,如果是自己要做多层拦截，显然使用chain，责任链模式进行多层设计（自定义添加拦截）</li>
+</ol>
+<hr>
+<h3 id="行为型模式（Behavioral-Patterns）"><a href="#行为型模式（Behavioral-Patterns）" class="headerlink" title="行为型模式（Behavioral Patterns）"></a>行为型模式（Behavioral Patterns）</h3><p>行为型模式特别关注对象之间的通信。也就是对对象的行为进行设计。</p>
+<hr>
+<h4 id="责任链模式（Chain-of-Responsibility-Pattern）"><a href="#责任链模式（Chain-of-Responsibility-Pattern）" class="headerlink" title="责任链模式（Chain of Responsibility Pattern）"></a>责任链模式（Chain of Responsibility Pattern）</h4><ul>
+<li>意图：避免请求发送者与接收者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿着这条链传递请求，直到有对象处理它为止。</li>
+<li>主要解决：职责链上的处理者负责处理请求，客户只需要将请求发送到职责链上即可，无须关心请求的处理细节和请求的传递，所以职责链将请求的发送者和请求的处理者解耦了。</li>
+<li>何时使用：在处理消息的时候以过滤很多道。</li>
+<li>如何解决：拦截的类都实现统一接口。</li>
+<li>理解：</li>
+</ul>
+<ol>
+<li>多层拦截的时候使用</li>
+<li>关键在于Chains类中处理拦截器的转发还是执行（Observable或者统一Request与Response结构体的链式函数调用，会大大简化dealChains的步骤）（Rxjava和JS中的Promise都会形成链式调用的结构，能在一定的程度上简化Chains的实现）</li>
+</ol>
+<hr>
+<h4 id="命令模式（Command-Pattern）"><a href="#命令模式（Command-Pattern）" class="headerlink" title="命令模式（Command Pattern）"></a>命令模式（Command Pattern）</h4><ul>
+<li>意图：将一个请求封装成一个对象，从而使您可以用不同的请求对客户进行参数化。</li>
+<li>主要解决：在软件系统中，行为请求者与行为实现者通常是一种紧耦合的关系，但某些场合，比如需要对行为进行记录、撤销或重做、事务等处理时，这种无法抵御变化的紧耦合的设计就不太合适。</li>
+<li>何时使用：在某些场合，比如要对行为进行”记录、撤销/重做、事务”等处理，这种无法抵御变化的紧耦合是不合适的。在这种情况下，如何将”行为请求者”与”行为实现者”解耦？将一组行为抽象为对象，可以实现二者之间的松耦合。</li>
+<li>关键代码：定义三个角色：1、received 真正的命令执行对象 2、Command 3、invoker 使用命令对象的入口</li>
+<li>注意事项：系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作，也可以考虑使用命令模式，见命令模式的扩展。</li>
+<li>理解：<ol>
+<li>将”行为请求者”与”行为实现者”解耦 或者 系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作 时候使用</li>
+<li>创建Command，以及操作记录分配commend的invoker类，received类为实际被操作的对象</li>
+<li>和观察者模式要进行对比一下（由于有rxjava和eventBus的存在，也会存在指令的分发，其实并不是一回事，那个是观察者模式）（个人感觉最大的区别在于Command的指令类包含的对recived类的实现）</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="解释器模式（Interpreter-Pattern）"><a href="#解释器模式（Interpreter-Pattern）" class="headerlink" title="解释器模式（Interpreter Pattern）"></a>解释器模式（Interpreter Pattern）</h4><ul>
+<li>意图：给定一个语言，定义它的文法表示，并定义一个解释器，这个解释器使用该标识来解释语言中的句子。</li>
+<li>主要解决：对于一些固定文法构建一个解释句子的解释器。</li>
+<li>使用场景：</li>
+</ul>
+<ol>
+<li>可以将一个需要解释执行的语言中的句子表示为一个抽象语法树。 </li>
+<li>一些重复出现的问题可以用一种简单的语言来进行表达。</li>
+<li>一个简单语法需要解释的场景。</li>
+</ol>
+<ul>
+<li>理解：在某些特定的业务逻辑中对某些加密等结构进行解释时候使用</li>
+</ul>
+<hr>
+<h4 id="迭代器模式（Iterator-Pattern）"><a href="#迭代器模式（Iterator-Pattern）" class="headerlink" title="迭代器模式（Iterator Pattern）"></a>迭代器模式（Iterator Pattern）</h4><ul>
+<li>意图：提供一种方法顺序访问一个聚合对象中各个元素, 而又无须暴露该对象的内部表示。</li>
+<li>主要解决：不同的方式来遍历整个整合对象。</li>
+<li>何时使用：遍历一个聚合对象。</li>
+<li>如何解决：把在元素之间游走的责任交给迭代器，而不是聚合对象。</li>
+<li>关键代码：定义接口：hasNext, next。</li>
+<li>应用实例：JAVA 中的 iterator。</li>
+<li>使用场景： 1、访问一个聚合对象的内容而无须暴露它的内部表示。 2、需要为聚合对象提供多种遍历方式。 3、为遍历不同的聚合结构提供一个统一的接口。</li>
+<li>注意事项：迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可让外部代码透明地访问集合内部的数据。</li>
+<li>理解：</li>
+</ul>
+<ol>
+<li>对于一些Container容器，去从池子或者队列或者多个容器中获取元素的时候可以采用这种结构</li>
+<li>对于有多重不同规则进行取值的可以使用这种方式</li>
+</ol>
+<hr>
+<h4 id="中介者模式（Mediator-Pattern）"><a href="#中介者模式（Mediator-Pattern）" class="headerlink" title="中介者模式（Mediator Pattern）"></a>中介者模式（Mediator Pattern）</h4><ul>
+<li>意图：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。</li>
+<li>主要解决：对象与对象之间存在大量的关联关系，这样势必会导致系统的结构变得很复杂，同时若一个对象发生改变，我们也需要跟踪与之相关联的对象，同时做出相应的处理。</li>
+<li>何时使用：多个类相互耦合，形成了网状结构。</li>
+<li>如何解决：将上述网状结构分离为星型结构。</li>
+<li>使用场景： 1、系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。 2、想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
+<li>注意事项：不应当在职责混乱的时候使用。</li>
+<li>理解：同一功能下，网状结构，存在一对多的关系的时候，使用一个Mediator来进行关系的解耦。</li>
+</ul>
+<hr>
+<h4 id="备忘录模式（Memento-Pattern）"><a href="#备忘录模式（Memento-Pattern）" class="headerlink" title="备忘录模式（Memento Pattern）"></a>备忘录模式（Memento Pattern）</h4><ul>
+<li>意图：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。</li>
+<li>主要解决：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态。</li>
+<li>何时使用：很多时候我们总是需要记录一个对象的内部状态，这样做的目的就是为了允许用户取消不确定或者错误的操作，能够恢复到他原先的状态，使得他有”后悔药”可吃。</li>
+<li>如何解决：通过一个备忘录类专门存储对象状态。</li>
+<li>关键代码：客户不与备忘录类耦合，与备忘录管理类耦合。</li>
+<li>优点： 1、给用户提供了一种可以恢复状态的机制，可以使用户能够比较方便地回到某个历史的状态。 2、实现了信息的封装，使得用户不需要关心状态的保存细节。</li>
+<li>缺点：消耗资源。如果类的成员变量过多，势必会占用比较大的资源，而且每一次保存都会消耗一定的内存。</li>
+<li>使用场景： 1、需要保存/恢复数据的相关状态场景。 2、提供一个可回滚的操作。</li>
+<li>注意事项： 1、为了符合迪米特原则，还要增加一个管理备忘录的类。 2、为了节约内存，可使用原型模式+备忘录模式。</li>
+<li>理解：原型模式Clone进行对象的复制，可以考虑结合Command模式配合（指令改变State）</li>
+</ul>
+<hr>
+<h4 id="观察者模式（Observer-Pattern）"><a href="#观察者模式（Observer-Pattern）" class="headerlink" title="观察者模式（Observer Pattern）"></a>观察者模式（Observer Pattern）</h4><ul>
+<li>意图：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。</li>
+<li>主要解决：一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。</li>
+<li>何时使用：一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。</li>
+<li>如何解决：使用面向对象技术，可以将这种依赖关系弱化。</li>
+<li>关键代码：在抽象类里有一个 ArrayList 存放观察者们</li>
+<li>理解：Rx框架，以及Android中的EventBus，以及RN中的DeviceEmmiter都是观察者模式的最好的实践</li>
+</ul>
+<hr>
+<h4 id="状态模式（State-Pattern）"><a href="#状态模式（State-Pattern）" class="headerlink" title="状态模式（State Pattern）"></a>状态模式（State Pattern）</h4><ul>
+<li>意图：允许对象在内部状态发生改变时改变它的行为，对象看起来好像修改了它的类。</li>
+<li>主要解决：对象的行为依赖于它的状态（属性），并且可以根据它的状态改变而改变它的相关行为。</li>
+<li>何时使用：代码中包含大量与对象状态有关的条件语句。</li>
+<li>如何解决：将各种具体的状态类抽象出来。</li>
+<li>关键代码：通常命令模式的接口中只有一个方法。而状态模式的接口中有一个或者多个方法。而且，状态模式的实现类的方法，一般返回值，或者是改变实例变量的值。也就是说，状态模式一般和对象的状态有关。实现类的方法有不同的功能，覆盖接口中的方法。状态模式和命令模式一样，也可以用于消除 if…else 等条件选择语句。</li>
+<li>使用场景： 1、行为随状态改变而改变的场景。 2、条件、分支语句的代替者。</li>
+<li>理解：将state与实现封装成State类，封装Context类来管理和赋予state （和Command模式有相似的地方，命令模式是將指令和操作封装在一起了，区别在于封装的侧重面）</li>
+</ul>
+<hr>
+<h4 id="空对象模式（Null-Object-Pattern）"><a href="#空对象模式（Null-Object-Pattern）" class="headerlink" title="空对象模式（Null Object Pattern）"></a>空对象模式（Null Object Pattern）</h4><p>在空对象模式中，我们创建一个指定各种要执行的操作的抽象类和扩展该类的实体类，还创建一个未对该类做任何实现的空对象类，该空对象类将无缝地使用在需要检查空值的地方。<br>空对象模式就是对为空的处理，就是返回null替换为返回一个空对象</p>
+<hr>
+<h4 id="策略模式（Strategy-Pattern）"><a href="#策略模式（Strategy-Pattern）" class="headerlink" title="策略模式（Strategy Pattern）"></a>策略模式（Strategy Pattern）</h4><ul>
+<li>意图：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</li>
+<li>主要解决：在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。</li>
+<li>何时使用：一个系统有许多许多类，而区分它们的只是他们直接的行为。</li>
+<li>如何解决：将这些算法封装成一个一个的类，任意地替换。</li>
+<li>关键代码：实现同一个接口。</li>
+<li>使用场景： 1、如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。 2、一个系统需要动态地在几种算法中选择一种。 3、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。</li>
+<li>注意事项：如果一个系统的策略多于四个，就需要考虑使用混合模式，解决策略类膨胀的问题。</li>
+<li>理解：</li>
+</ul>
+<ol>
+<li>同状态模式（STATE Pattern）相似，侧重面不同，策略模式侧重封装行为，算法 </li>
+<li>同样需要一个context类来管理持有执行行为 </li>
+<li>同StatePattern以及CommandPattern一样，都可以用来消除if else</li>
+</ol>
+<hr>
+<h4 id="模板模式（Template-Pattern）"><a href="#模板模式（Template-Pattern）" class="headerlink" title="模板模式（Template Pattern）"></a>模板模式（Template Pattern）</h4><ul>
+<li>意图：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</li>
+<li>主要解决：一些方法通用，却在每一个子类都重新写了这一方法。</li>
+<li>何时使用：有一些通用的方法。</li>
+<li>如何解决：将这些通用算法抽象出来。</li>
+<li>关键代码：在抽象类实现，其他步骤在子类实现。</li>
+<li>使用场景： 1、有多个子类共有的方法，且逻辑相同。 2、重要的、复杂的方法，可以考虑作为模板方法。</li>
+<li>注意事项：为防止恶意操作，一般模板方法都加上 final 关键词。(注意 final 修饰 不能修改的地方)</li>
+</ul>
+<hr>
+<h4 id="访问者模式（Visitor-Pattern）"><a href="#访问者模式（Visitor-Pattern）" class="headerlink" title="访问者模式（Visitor Pattern）"></a>访问者模式（Visitor Pattern）</h4><ul>
+<li>意图：主要将数据结构与数据操作分离。</li>
+<li>主要解决：稳定的数据结构和易变的操作耦合问题。</li>
+<li>何时使用：需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，使用访问者模式将这些封装到类中。</li>
+<li>如何解决：在被访问的类里面加一个对外提供接待访问者的接口。</li>
+<li>关键代码：在数据基础类里面有一个方法接受访问者，将自身引用传入访问者。</li>
+<li>使用场景： 1、对象结构中对象对应的类很少改变，但经常需要在此对象结构上定义新的操作。 2、需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，也不希望在增加新操作时修改这些类。</li>
+<li>注意事项：访问者可以对功能进行统一，可以做报表、UI、拦截器与过滤器。</li>
+<li>理解：稳定不变的数据结构，多变的对结构的操作，在数据结构类中留下进行操作的接口</li>
+</ul>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">parse server windows android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式 java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhanghaosong.com/2018/08/24/设计模式学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/12/06/Parse后台搭建与运行基于Windows平台/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Parse后台搭建与运行基于Windows平台</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://zhanghaosong.com/2018/08/24/设计模式学习笔记/",
+  owner: 'DiskyZhs',
+  repo: 'DiskyZhs.github.io',
+  oauth: {
+    client_id: 'bb7fbd3161272f191944',
+    client_secret: 'b3c306a5ccd3dac6e9fdc2b2c1182a04e8eada74',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -219,8 +616,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
